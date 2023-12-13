@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
 });
 
+//old method without cors
 // export default defineConfig({
 //   plugins: [react()],
 //   server: {
