@@ -1,0 +1,17 @@
+We should be able to run everything directly from the client folder so you can just: 
+
+cd client
+npm run both
+
+No need to manually seed the database. When you run the client you should see a button that will automatically seed the database for you, and this will stay seeded on your local machine even if you close docker. But docker/local database are seperate.
+
+Property only has two items for now, but that should be enough to get us going on being able to build everything out. Description may need changing so it can be formatted easier or something.
+
+Here are some custom commands you can run from the client:
+
+npm run both = runs both servers using the below commands at the same time:
+                        - npm run server = run the backend server from within the client folder
+                        - npm run dev = standard Vite development server
+
+npm run prettier <your_name> = will only run prettier on files in your directory.
+npm run prettier-global = will apply prettier globally. This will mess with other peoples files.
