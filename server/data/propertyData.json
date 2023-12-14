@@ -1,65 +1,66 @@
 [
-    {
-      "propertyID": "2SBD",
-      "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
-      "image": [
-        "./images/2SBD/1.jpg",
-        "./images/2SBD/2.jpg",
-        "./images/2SBD/3.jpg",
-        "./images/2SBD/4.jpg",
-        "./images/2SBD/5.jpg",
-        "./images/2SBD/6.jpg"
-      ],
-      "city": "Auckland",
-      "suburb": "Botany Downs",
-      "address": "2/11 Spears Place",
-      "geolocation": {
-        "latitude": -36.905644,
-        "longitude": 174.912981
-      },
-      "slug": "a short description",
-      "price": 700,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "garage": "Yes",
-      "streetparking": "Yes",
-      "pets": "No",
-      "smokers": "No",
-      "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
-      "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
-      "available": "1/01/2024",
-      "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
+  {
+    "propertyID": "2SBD",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
+    "image": [
+      "./images/2SBD/1.jpg",
+      "./images/2SBD/2.jpg",
+      "./images/2SBD/3.jpg",
+      "./images/2SBD/4.jpg",
+      "./images/2SBD/5.jpg",
+      "./images/2SBD/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Botany Downs",
+    "address": "2/11 Spears Place",
+    "geolocation": {
+      "latitude": -36.905644,
+      "longitude": 174.912981
     },
-    {
-      "propertyID": "4OMC",
-      "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
-      "image": [
-        "./images/4OMC/1.jpg",
-        "./images/4OMC/2.jpg",
-        "./images/4OMC/3.jpg",
-        "./images/4OMC/4.jpg",
-        "./images/4OMC/5.jpg",
-        "./images/4OMC/6.jpg"
-      ],
-      "city": "Auckland",
-      "suburb": "Manukau City",
-      "address": "4 Oswald Close, Flat Bush",
-      "geolocation": {
-        "latitude": -36.954433,
-        "longitude": 174.914454
-      },
-      "slug": "a short description",
-      "price": 1200,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "garage": "Yes",
-      "streetparking": "Yes",
-      "pets": "No",
-      "smokers": "No",
-      "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
-      "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
-      "available": "26/01/2024",
-      "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
-    }
-  ]
-  
+    "slug": "a short description",
+    "price": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "1/01/2024",
+    "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
+  },
+  {
+    "propertyID": "4OMC",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
+    "image": [
+      "./images/4OMC/1.jpg",
+      "./images/4OMC/2.jpg",
+      "./images/4OMC/3.jpg",
+      "./images/4OMC/4.jpg",
+      "./images/4OMC/5.jpg",
+      "./images/4OMC/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Flat Bush",
+    "address": "4 Oswald Close",
+    "geolocation": {
+      "latitude": -36.954433,
+      "longitude": 174.914454
+    },
+    "slug": "a short description",
+    "price": 1200,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "26/01/2024",
+    "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
+  }
+]
