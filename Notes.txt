@@ -13,5 +13,5 @@ npm run both = runs both servers using the below commands at the same time:
                         - npm run server = run the backend server from within the client folder
                         - npm run dev = standard Vite development server
 
-npm run prettier <your_name> = will only run prettier on files in your directory.
+npm run prettier-<your_name> = will only run prettier on files in your directory.
 npm run prettier-global = will apply prettier globally. This will mess with other peoples files.

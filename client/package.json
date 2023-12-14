@@ -9,9 +9,9 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier-global": "prettier . --write",
-    "prettier sam": "prettier pages/sam/**/* --write",
-    "prettier nils": "prettier pages/nils/**/* --write",
-    "prettier toby": "prettier pages/toby/**/* --write",
+    "prettier-sam": "prettier pages/sam/**/* --write",
+    "prettier-nils": "prettier pages/nils/**/* --write",
+    "prettier-toby": "prettier pages/toby/**/* --write",
     "server": "cd ../server && npm run server",
     "seed": "node ../server/cli/cli.cjs seed ../server/data/propertyData.json",
     "both": "concurrently \"npm run server\" \"npm run dev\""
