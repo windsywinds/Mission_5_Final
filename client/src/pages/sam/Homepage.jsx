@@ -1,48 +1,73 @@
 
 import React from "react"
 import { useState, useEffect } from "react"
-import logo from '../../assets/react.svg'
-import banner from '../../assets/banner.jpg'
-import home1 from '../../assets/home1.jpg'
-import home2 from '../../assets/home2.jpg'
-
-import data from '../../../../server/data/propertyData.json'
+import banner from '../../assets/banner.png'
+import home1 from '../../assets/home1.png'
+import home2 from '../../assets/home2.png'
 
 export const Home = () => {
-    const [cities, setCities] = useState("")
-    const [districst, setDistricts] = useState("")
-    const [suburbs, setSuburbs] = useState("")
+    const [data, setData] = useState()
+    const [cities, setCities] = useState()
+    const [districts, setDistricts] = useState()
+    const [suburbs, setSuburbs] = useState()
+    const [selectedCity, setSelectedCity] = useState()
+    const [selectedDistrict, setSelectedDistrict] = useState()
+    const [selectedSuburb, setSelectedSuburb] = useState()
 
-    const getAllEntries = async () => {
+    const SERVER_URI = import.meta.env.VITE_SERVER_URI || "http://localhost:8001/";
+
+    const getLocationData = async () => {
         try {
-          const entries = await client.getEntries({ content_type: 'photos' });
-          setPhotoItems(entries.items);
-    
-          // Extract unique tags from entries
-          const allTags = new Set();
-          entries.items.forEach((item) => {
-            if (item.fields.tags) {
-              item.fields.tags.forEach((tag) => {
-                allTags.add(tag);
-              });
-            }
-          });
-    
-          setTags(Array.from(allTags));
-          setSelectedTag(null);
-        } catch (error) {
-          console.log(`Error fetching photos ${error}`);
-        }
+            const response = await fetch(SERVER_URI + "searchDatabase");
+            const data = await response.json();
+            setData(data);
+        
+            // Extract only unique fields from each entry (no double up city names etc)
+            const allCities = new Set();
+            data.forEach((item) => {
+              if (item.city) {
+                allCities.add(item.city);
+              }
+            });
+            const allDistricts = new Set();
+            data.forEach((item) => {
+              if (item.district) {
+                allDistricts.add(item.district);
+              }
+            });
+            const allSuburbs = new Set();
+            data.forEach((item) => {
+              if (item.suburb) {
+                allSuburbs.add(item.suburb);
+              }
+            });
+            setCities(Array.from(allCities));
+            setDistricts(Array.from(allDistricts));
+            setSuburbs(Array.from(allSuburbs));
+          } catch (error) {
+            console.log(`Error fetching data: ${error}`);
+          }
       };
 
     useEffect(() => {
-        getAllEntries();
+        getLocationData();
       }, []);
+
+    const handleCitySelection = (e) => {
+        setSelectedCity(e.target.value);
+    }
+    const handleDistrictSelection = (e) => {
+        setSelectedDistrict(e.target.value);
+    }
+    const handleSuburbSelection = (e) => {
+        setSelectedSuburb(e.target.value);
+    }
 
     return(
         <div className="flex flex-col w-full items-center">
 
-            <div className={`flex flex-col w-full h-[20rem] md:h-[20rem] items-center justify-center`} style={{ backgroundImage: `url(${banner})`, backgroundSize: "cover" }}>
+            <div className={`flex flex-col w-full h-[20rem] md:h-[20rem] items-center justify-center`} 
+                style={{ backgroundImage: `url(${banner})`, backgroundSize: "cover", backgroundPosition: "center" }}>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-center text-white py-6">
                         Find&nbsp;Your&nbsp;Dream Rental&nbsp;Home&nbsp;Today
@@ -54,20 +79,27 @@ export const Home = () => {
                 <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4">
 
                 <select className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-t-lg md:rounded-lg border-[1px] p-2"
-                         id="city" name="city">
-                    <option disabled selected>City</option>
-                    <option>City 1</option>
+                         id="city" name="city" defaultValue="City" onChange={handleCitySelection}>
+                    <option disabled value="City">City</option>
+                    {data && cities.map((city) => (
+                        <option key={city} value={city}>{city}</option>
+                    ))}
+                    
                    
                 </select>
                 <select className="w-full md:w-1/5 bg-white border-[#a6a6a6] md:rounded-lg border-[1px] p-2"
-                        id="district" name="district">
-                    <option disabled selected >District</option>
-                    <option>District 1</option>
+                        id="district" name="district" defaultValue="District" onChange={handleDistrictSelection}>
+                    <option disabled>District</option>
+                    {data && districts.map((district) => (
+                        <option key={district} value={district}>{district}</option>
+                    ))}
                 </select>
                 <select className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-b-lg md:rounded-lg border-[1px] p-2"
-                        id="suburb" name="suburb">
-                    <option disabled selected >Suburb</option>
-                    <option>Suburb 1</option>
+                        id="suburb" name="suburb" defaultValue="Suburb" onChange={handleSuburbSelection}>
+                    <option disabled>Suburb</option>
+                    {data && suburbs.map((suburb) => (
+                        <option key={suburb} value={suburb}>{suburb}</option>
+                    ))}
                 </select>
                 <div className="flex w-full md:w-auto h-full items-center justify-center py-2">
                     <button className="bg-[#d70707] text-white rounded-lg py-1.5 w-[80%] md:w-auto md:px-4">
@@ -78,7 +110,7 @@ export const Home = () => {
             </div>
 
             <div className="bg-[#ececec] w-full flex flex-col md:flex-row items-center justify-evenly py-12  drop-shadow-lg">
-                <div className="md:w-1/3 drop-shadow-lg px-8">
+                <div className="md:mt-16 md:w-1/3 drop-shadow-lg px-8 md:px-0">
                     <img src={home1}
                         className="" />
                 </div>
@@ -93,7 +125,7 @@ export const Home = () => {
                 </div>
             </div>
             <div className="w-full flex flex-col md:flex-row-reverse md:flex-row items-center justify-evenly py-12">
-                <div className="md:w-1/3 drop-shadow-lg px-8">
+                <div className="md:w-1/3 drop-shadow-lg px-8 md:px-0">
                     <img src={home2}
                         className="" />
                 </div>
