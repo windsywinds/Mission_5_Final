@@ -2,11 +2,15 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 import { WebConfig } from "./pages/Admin";
+import { Home } from "./pages/sam/Homepage";
 
 function App() {
   return (
     <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen items-center">
+
       
+    <Home />
+
       {/* Helpful stuff below - styles above this are site global but you can delete below this*/}
       <div className="bg-white flex flex-col text-[#213547] h-screen w-screen items-center">
 
@@ -15,7 +19,7 @@ function App() {
   <WebConfig />
 </div>
 <div>
-  <h1 className="underline">UI Kit Colour and Font Ref</h1>
+  <h1 className="underline">UI Kit Colour and Font Ref</h1> 
   <p className="text-black front-normal">black, regular</p>
   <p className="text-[#d70707] font-medium">red, medium</p>
   <p className="text-[#003db2] font-semibold">blue, semibold</p>

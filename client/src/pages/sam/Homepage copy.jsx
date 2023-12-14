@@ -1,43 +1,11 @@
 
 import React from "react"
-import { useState, useEffect } from "react"
 import logo from '../../assets/react.svg'
 import banner from '../../assets/banner.jpg'
 import home1 from '../../assets/home1.jpg'
 import home2 from '../../assets/home2.jpg'
 
-import data from '../../../../server/data/propertyData.json'
-
 export const Home = () => {
-    const [cities, setCities] = useState("")
-    const [districst, setDistricts] = useState("")
-    const [suburbs, setSuburbs] = useState("")
-
-    const getAllEntries = async () => {
-        try {
-          const entries = await client.getEntries({ content_type: 'photos' });
-          setPhotoItems(entries.items);
-    
-          // Extract unique tags from entries
-          const allTags = new Set();
-          entries.items.forEach((item) => {
-            if (item.fields.tags) {
-              item.fields.tags.forEach((tag) => {
-                allTags.add(tag);
-              });
-            }
-          });
-    
-          setTags(Array.from(allTags));
-          setSelectedTag(null);
-        } catch (error) {
-          console.log(`Error fetching photos ${error}`);
-        }
-      };
-
-    useEffect(() => {
-        getAllEntries();
-      }, []);
 
     return(
         <div className="flex flex-col w-full items-center">
