@@ -3,12 +3,12 @@
     "propertyID": "2SBD",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
     "image": [
-      "./images/2SBD/1.jpg",
-      "./images/2SBD/2.jpg",
-      "./images/2SBD/3.jpg",
-      "./images/2SBD/4.jpg",
-      "./images/2SBD/5.jpg",
-      "./images/2SBD/6.jpg"
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -18,7 +18,7 @@
       "latitude": -36.905644,
       "longitude": 174.912981
     },
-    "slug": "a short description",
+    "slug": "Stunning wide views in a superb location.",
     "price": 700,
     "bedrooms": 3,
     "bathrooms": 2,
@@ -33,15 +33,138 @@
     "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
   },
   {
+    "propertyID": "50GD",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
+    "image": [
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Botany Downs",
+    "address": "50 Gosford Drive",
+    "geolocation": {
+      "latitude": -36.909981,
+      "longitude": 174.913136
+    },
+    "slug": "Expansive family home on a quiet, desirable street.",
+    "price": 1100,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "26/01/2024",
+    "listed": "4/01/2024",
+    "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
+  },
+  {
+    "propertyID": "3GFB",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
+    "image": [
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Botany Downs",
+    "address": "3 Greenbrooke Drive",
+    "geolocation": {
+      "latitude": -36.958979,
+      "longitude": 174.920735
+    },
+    "slug": "Newly renovated brick-and-tile unit.",
+    "price": 560,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "No",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Intermediate School", "Public Park", "Shopping Mall", "Hospital", "Beach"],
+    "available": "10/02/2024",
+    "listed": "6/01/2024",
+    "description": "Newly renovated brick-and-tile unit. Down a long, private driveway with generous shared grounds, this sunny, two-bedroom, 1 bathroom unit with a courtyard garden and greenhouse offers a quiet and secluded lifestyle. Solid brick-and-tile construction, it is one of just six and is in close proximity to Milford Shopping Centre, Milford Beach, North Shore Hospital, Smales Farm and bus routes."
+  },
+  {
+    "propertyID": "10GD",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
+    "image": [
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Botany Downs",
+    "address": "102 Gosford Drive",
+    "geolocation": {
+      "latitude": -36.906578,
+      "longitude": 174.914451
+    },
+    "slug": "Low maintenance family home with gardens.",
+    "price": 525,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "18/02/2024",
+    "listed": "15/01/2024",
+    "description": "Leave the car at home & walk to town. This lovely family home features an open plan kitchen & dining area, a separate lounge, three double bedrooms, a family bathroom with separate toilet, a separate laundry & a single garage. French doors lead from the lounge out to a large, sunny, deck, suitable for summer BBQ's. This home is completed with low maintenance, easy care gardens."
+  },
+  {
+    "propertyID": "46AR",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
+    "image": [
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Botany Downs",
+    "address": "46 Andrew Road",
+    "geolocation": {
+      "latitude": -36.906009,
+      "longitude": 174.923433
+    },
+    "slug": "Stylish designer showhome.",
+    "price": 710,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "No",
+    "amenities": ["Unfurnished", "Heat Pump", "Double Garage", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "15/02/2024",
+    "listed": "12/01/2024",
+    "description": "Move in and enjoy this Stunning Showhome Quality home with high quality specifications which includes: Alfresco entertaining area on the biform composite deck and skylight to the portico; Large designer kitchen and scullery with seamless flow to dining and main living area; Four bedrooms including Master suite with walk-in wardrobe and ensuite; Stylish designer Decoforme slat wall to entrance and stairwell; Fully ducted heat pump system."
+  },
+  {
     "propertyID": "4OMC",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
     "image": [
-      "./images/4OMC/1.jpg",
-      "./images/4OMC/2.jpg",
-      "./images/4OMC/3.jpg",
-      "./images/4OMC/4.jpg",
-      "./images/4OMC/5.jpg",
-      "./images/4OMC/6.jpg"
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -51,7 +174,7 @@
       "latitude": -36.954433,
       "longitude": 174.914454
     },
-    "slug": "a short description",
+    "slug": "Expansive family home on a quiet, desirable street.",
     "price": 1200,
     "bedrooms": 5,
     "bathrooms": 3,
@@ -64,5 +187,410 @@
     "available": "26/01/2024",
     "listed": "4/01/2024",
     "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
+  },
+  {
+    "propertyID": "3GFB",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
+    "image": [
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Flat Bush",
+    "address": "3 Greenbrooke Drive",
+    "geolocation": {
+      "latitude": -36.958979,
+      "longitude": 174.920735
+    },
+    "slug": "Newly renovated brick-and-tile unit.",
+    "price": 560,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "No",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Intermediate School", "Public Park", "Shopping Mall", "Hospital", "Beach"],
+    "available": "10/02/2024",
+    "listed": "6/01/2024",
+    "description": "Newly renovated brick-and-tile unit. Down a long, private driveway with generous shared grounds, this sunny, two-bedroom, 1 bathroom unit with a courtyard garden and greenhouse offers a quiet and secluded lifestyle. Solid brick-and-tile construction, it is one of just six and is in close proximity to Milford Shopping Centre, Milford Beach, North Shore Hospital, Smales Farm and bus routes."
+  },
+  {
+    "propertyID": "25GC",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
+    "image": [
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Flat Bush",
+    "address": "25 Gibbston Crescent",
+    "geolocation": {
+      "latitude": -36.958850,
+      "longitude": 174.928603
+    },
+    "slug": "Low maintenance family home with gardens.",
+    "price": 525,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "18/02/2024",
+    "listed": "15/01/2024",
+    "description": "Leave the car at home & walk to town. This lovely family home features an open plan kitchen & dining area, a separate lounge, three double bedrooms, a family bathroom with separate toilet, a separate laundry & a single garage. French doors lead from the lounge out to a large, sunny, deck, suitable for summer BBQ's. This home is completed with low maintenance, easy care gardens."
+  },
+  {
+    "propertyID": "15KR",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
+    "image": [
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Manukau City",
+    "suburb": "Flat Bush",
+    "address": "15 Kira Road",
+    "geolocation": {
+      "latitude": -37.101564,
+      "longitude": 174.938683
+    },
+    "slug": "Stylish designer showhome.",
+    "price": 710,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "No",
+    "amenities": ["Unfurnished", "Heat Pump", "Double Garage", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "15/02/2024",
+    "listed": "12/01/2024",
+    "description": "Move in and enjoy this Stunning Showhome Quality home with high quality specifications which includes: Alfresco entertaining area on the biform composite deck and skylight to the portico; Large designer kitchen and scullery with seamless flow to dining and main living area; Four bedrooms including Master suite with walk-in wardrobe and ensuite; Stylish designer Decoforme slat wall to entrance and stairwell; Fully ducted heat pump system."
+  },
+  {
+    "propertyID": "6LSM",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
+    "image": [
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "North Shore City",
+    "suburb": "Milford",
+    "address": "6 Livingstone Street",
+    "geolocation": {
+      "latitude": -36.772305,
+      "longitude": 174.754244
+    },
+    "slug": "Stylish designer showhome.",
+    "price": 810,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "No",
+    "amenities": ["Unfurnished", "Heat Pump", "Double Garage", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "25/02/2024",
+    "listed": "12/01/2024",
+    "description": "Move in and enjoy this Stunning Showhome Quality home with high quality specifications which includes: Alfresco entertaining area on the biform composite deck and skylight to the portico; Large designer kitchen and scullery with seamless flow to dining and main living area; Four bedrooms including Master suite with walk-in wardrobe and ensuite; Stylish designer Decoforme slat wall to entrance and stairwell; Fully ducted heat pump system."
+  },
+  {
+    "propertyID": "4MNS",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
+    "image": [
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "North Shore City",
+    "suburb": "Milford",
+    "address": "4/38 Nile Road",
+    "geolocation": {
+      "latitude": -36.777976,
+      "longitude": 174.753568
+    },
+    "slug": "Newly renovated brick-and-tile unit.",
+    "price": 660,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "garage": "No",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Intermediate School", "Public Park", "Shopping Mall", "Hospital", "Beach"],
+    "available": "10/02/2024",
+    "listed": "6/01/2024",
+    "description": "Newly renovated brick-and-tile unit. Down a long, private driveway with generous shared grounds, this sunny, two-bedroom, 1 bathroom unit with a courtyard garden and greenhouse offers a quiet and secluded lifestyle. Solid brick-and-tile construction, it is one of just six and is in close proximity to Milford Shopping Centre, Milford Beach, North Shore Hospital, Smales Farm and bus routes."
+  },
+  {
+    "propertyID": "19PP",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
+    "image": [
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "North Shore City",
+    "suburb": "Milford",
+    "address": "19A Prestige Place",
+    "geolocation": {
+      "latitude": -36.767076,
+      "longitude": 174.758205
+    },
+    "slug": "Stunning wide views in a superb location.",
+    "price": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "12/01/2024",
+    "listed": "1/01/2024",
+    "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
+  },
+  {
+    "propertyID": "15RA",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
+    "image": [
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "North Shore City",
+    "suburb": "Milford",
+    "address": "15 Richards Avenue",
+    "geolocation": {
+      "latitude": -36.762598,
+      "longitude": 174.754219
+    },
+    "slug": "Expansive family home on a quiet, desirable street.",
+    "price": 1100,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "26/01/2024",
+    "listed": "4/01/2024",
+    "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
+  },
+  {
+    "propertyID": "5PPF",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
+    "image": [
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Pukekohe",
+    "address": "5 Paterson Ave",
+    "geolocation": {
+      "latitude": -37.20370,
+      "longitude": 174.893564
+    },
+    "slug": "Low maintenance family home with gardens.",
+    "price": 670,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "18/02/2024",
+    "listed": "15/01/2024",
+    "description": "Leave the car at home & walk to town. This lovely family home features an open plan kitchen & dining area, a separate lounge, three double bedrooms, a family bathroom with separate toilet, a separate laundry & a single garage. French doors lead from the lounge out to a large, sunny, deck, suitable for summer BBQ's. This home is completed with low maintenance, easy care gardens."
+  },
+  {
+    "propertyID": "14CS",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
+    "image": [
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Pukekohe",
+    "address": "14 Churchill Street",
+    "geolocation": {
+      "latitude": -37.200020,
+      "longitude": 174.894788
+    },
+    "slug": "Stunning wide views in a superb location.",
+    "price": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "12/01/2024",
+    "listed": "1/01/2024",
+    "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
+  },
+  {
+    "propertyID": "5PSC",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
+    "image": [
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Pukekohe",
+    "address": "5 Princes Street",
+    "geolocation": {
+      "latitude": -37.195451,
+      "longitude": 174.898987
+    },
+    "slug": "Expansive family home on a quiet, desirable street.",
+    "price": 1200,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "26/01/2024",
+    "listed": "4/01/2024",
+    "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
+  },
+  {
+    "propertyID": "6AKF",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
+    "image": [
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Karaka",
+    "address": "6 Ahunga Road",
+    "geolocation": {
+      "latitude": -37.101564,
+      "longitude": 174.938683
+    },
+    "slug": "Stylish designer showhome.",
+    "price": 810,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "No",
+    "amenities": ["Unfurnished", "Heat Pump", "Double Garage", "Garden"],
+    "vacinity": ["Public Park", "Shopping Mall"],
+    "available": "25/02/2024",
+    "listed": "12/01/2024",
+    "description": "Move in and enjoy this Stunning Showhome Quality home with high quality specifications which includes: Alfresco entertaining area on the biform composite deck and skylight to the portico; Large designer kitchen and scullery with seamless flow to dining and main living area; Four bedrooms including Master suite with walk-in wardrobe and ensuite; Stylish designer Decoforme slat wall to entrance and stairwell; Fully ducted heat pump system."
+  },
+  {
+    "propertyID": "86KP",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
+    "image": [
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Karaka",
+    "address": "86 Kahui Parade",
+    "geolocation": {
+      "latitude": -37.097865,
+      "longitude": 174.937255
+    },
+    "slug": "Newly renovated brick-and-tile unit.",
+    "price": 660,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "garage": "No",
+    "streetparking": "Yes",
+    "pets": "Yes",
+    "smokers": "Yes",
+    "amenities": ["Unfurnished", "Heat Pump", "Carport", "Garden"],
+    "vacinity": ["Intermediate School", "Public Park", "Shopping Mall", "Hospital", "Beach"],
+    "available": "10/02/2024",
+    "listed": "6/01/2024",
+    "description": "Newly renovated brick-and-tile unit. Down a long, private driveway with generous shared grounds, this sunny, two-bedroom, 1 bathroom unit with a courtyard garden and greenhouse offers a quiet and secluded lifestyle. Solid brick-and-tile construction, it is one of just six and is in close proximity to Milford Shopping Centre, Milford Beach, North Shore Hospital, Smales Farm and bus routes."
+  },
+  {
+    "propertyID": "6TLK",
+    "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
+    "image": [
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
+    ],
+    "city": "Auckland",
+    "district": "Franklin",
+    "suburb": "Karaka",
+    "address": "6 Tiaki Lane",
+    "geolocation": {
+      "latitude": -37.101156,
+      "longitude": 174.938360
+    },
+    "slug": "Stunning wide views in a superb location.",
+    "price": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage": "Yes",
+    "streetparking": "Yes",
+    "pets": "No",
+    "smokers": "No",
+    "amenities": ["Fully Furnished", "Dryer", "Fibre Internet"],
+    "vacinity": ["Primary School", "Intermediate School", "Public Park", "Shopping Mall"],
+    "available": "12/01/2024",
+    "listed": "1/01/2024",
+    "description": "With stunning wide views across the local suburbs, this two-level family home sits in a superb location in Botany Downs, hidden in an elevated rear section at the end of peaceful cul-de-sac. The modern home with a floor area of 196m2 spreads out expansively across the floors, filled with beautiful light, The layout is ideal for a family with teens needing their space. Downstairs, there is one double bedroom and a bathroom, the good-sized lounge is bright and airy which opens to a well-maintained colour courtyard. It also includes a modern kitchen with a separate dining area, and a double garage. Walking upstairs, there are 2 bedrooms and 1 bathroom, with direct access to one of the bedrooms, which could be treated as a semi-master room. The upstairs living area is roomy with great flow to the sunny balcony. It is a very convenient location, just a few minutes drive to Highland Park community centre, Library, restaurant, Countdown, Furthermore, it is close to Lloyd Elsmore Park, sports facilities and Botany shopping Centre, in the zone of Pakuranga College, Howick Intermediate, Botany Downs Primary School and Elim school."
   }
 ]
