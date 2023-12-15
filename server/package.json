@@ -1,12 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "seed": "node ./cli/cli.cjs seed ./data/propertyData.json",
     "server": "nodemon server.js",
-    "test": "jest"
+    "test": "jest",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,6 @@
     "jest": "^29.7.0",
     "nodemon": "^3.0.2",
     "supertest": "^6.3.3"
-  }
+  },
+  "description": ""
 }
