@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "seed": "node ./cli/cli.cjs seed ./data/propertyData.json",
@@ -23,6 +24,6 @@
     "jest": "^29.7.0",
     "nodemon": "^3.0.2",
     "supertest": "^6.3.3"
-  },
-  "description": ""
+  }
+  
 }
