@@ -9,9 +9,9 @@ export const Home = () => {
   const [cities, setCities] = useState();
   const [districts, setDistricts] = useState();
   const [suburbs, setSuburbs] = useState();
-  const [selectedCity, setSelectedCity] = useState();
-  const [selectedDistrict, setSelectedDistrict] = useState();
-  const [selectedSuburb, setSelectedSuburb] = useState();
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [selectedSuburb, setSelectedSuburb] = useState("");
 
   const SERVER_URI =
     import.meta.env.VITE_SERVER_URI || "http://localhost:8001/";
@@ -20,30 +20,11 @@ export const Home = () => {
     try {
       const response = await fetch(SERVER_URI + "searchDatabase");
       const data = await response.json();
+      //Set collection data
       setData(data);
-
-      // Extract only unique fields from each entry (no double up city names etc)
-      const allCities = new Set();
-      data.forEach((item) => {
-        if (item.city) {
-          allCities.add(item.city);
-        }
-      });
-      const allDistricts = new Set();
-      data.forEach((item) => {
-        if (item.district) {
-          allDistricts.add(item.district);
-        }
-      });
-      const allSuburbs = new Set();
-      data.forEach((item) => {
-        if (item.suburb) {
-          allSuburbs.add(item.suburb);
-        }
-      });
-      setCities(Array.from(allCities));
-      setDistricts(Array.from(allDistricts));
-      setSuburbs(Array.from(allSuburbs));
+      //Set city list
+      const allCities = [...new Set(data.map((item) => item.city))];
+      setCities(allCities);
     } catch (error) {
       console.log(`Error fetching data: ${error}`);
     }
@@ -53,15 +34,41 @@ export const Home = () => {
     getLocationData();
   }, []);
 
+    // Update districts based on user selected city
+    useEffect(() => {
+      if (data && selectedCity) {
+        const cityData = data.filter((item) => item.city === selectedCity);
+        const allDistricts = [...new Set(cityData.map((item) => item.district))];
+        setDistricts(allDistricts);
+      }
+    }, [data, selectedCity]);
+
+  // Update suburbs based on user selected city and district
+  useEffect(() => {
+    if (data && selectedCity && selectedDistrict) {
+      const filteredData = data.filter(
+        (item) => item.city === selectedCity && item.district === selectedDistrict
+      );
+      const allSuburbs = [...new Set(filteredData.map((item) => item.suburb))];
+      setSuburbs(allSuburbs);
+    }
+  }, [data, selectedCity, selectedDistrict]);
+
   const handleCitySelection = (e) => {
     setSelectedCity(e.target.value);
+    setSelectedDistrict(""); // Reset user selections when user changes selections
+    setSelectedSuburb("");
   };
   const handleDistrictSelection = (e) => {
     setSelectedDistrict(e.target.value);
+    setSelectedSuburb("");
   };
   const handleSuburbSelection = (e) => {
     setSelectedSuburb(e.target.value);
   };
+  const handleFormSubmit = (e) => {
+    //do stuff with selectedCity, selectedDistrict, selectedSuburb
+  }
 
   return (
     <div className="flex flex-col w-full items-center">
@@ -80,7 +87,8 @@ export const Home = () => {
           Where are you planning to move to?
         </h3>
 
-        <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4">
+        <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4"
+              onSubmit={handleFormSubmit}>
           <select
             className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-t-lg md:rounded-lg border-[1px] p-2"
             id="city"
@@ -91,7 +99,7 @@ export const Home = () => {
             <option disabled value="City">
               City
             </option>
-            {data &&
+            {data && cities && 
               cities.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -106,7 +114,7 @@ export const Home = () => {
             onChange={handleDistrictSelection}
           >
             <option disabled>District</option>
-            {data &&
+            {data && districts && 
               districts.map((district) => (
                 <option key={district} value={district}>
                   {district}
@@ -121,7 +129,7 @@ export const Home = () => {
             onChange={handleSuburbSelection}
           >
             <option disabled>Suburb</option>
-            {data &&
+            {data && suburbs &&
               suburbs.map((suburb) => (
                 <option key={suburb} value={suburb}>
                   {suburb}
@@ -129,7 +137,8 @@ export const Home = () => {
               ))}
           </select>
           <div className="flex w-full md:w-auto h-full items-center justify-center py-2">
-            <button className="bg-[#d70707] text-white rounded-lg py-1.5 w-[80%] md:w-auto md:px-4">
+            <button className="bg-[#d70707] text-white rounded-lg py-1.5 w-[80%] md:w-auto md:px-4"
+                    type="submit">
               Search
             </button>
           </div>
@@ -138,7 +147,7 @@ export const Home = () => {
 
       <div className="bg-[#ececec] w-full flex flex-col md:flex-row items-center justify-evenly py-12  drop-shadow-lg">
         <div className="md:mt-16 md:w-1/3 drop-shadow-lg px-8 md:px-0">
-          <img src={home1} className="" />
+          <img src={home1} className="" alt="An image of a house"/>
         </div>
         <div className="h-full flex flex-col md:w-1/3 space-y-8 px-6 pt-4 md:pt-0 md:justify-center">
           <h2 className="text-3xl font-bold">Our Mission</h2>
@@ -163,7 +172,7 @@ export const Home = () => {
       </div>
       <div className="w-full flex flex-col md:flex-row-reverse md:flex-row items-center justify-evenly py-12">
         <div className="md:w-1/3 drop-shadow-lg px-8 md:px-0">
-          <img src={home2} className="" />
+          <img src={home2} className="" alt="An image of a house"/>
         </div>
         <div className="h-full flex flex-col md:w-1/3 space-y-8 px-6 pt-4 md:pt-0 md:justify-center">
           <h2 className="text-3xl font-bold">Outstanding Properties</h2>
