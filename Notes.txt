@@ -1,11 +1,12 @@
-We should be able to run everything directly from the client folder so you can just: 
+We should be able to run everything directly from the client folder so you just need to npm install both directorys 
+And from then on you can just work out of the client folder: 
 
 cd client
 npm run both
 
 No need to manually seed the database. When you run the client you should see a button that will automatically seed the database for you, and this will stay seeded on your local machine even if you close docker. But docker/local database are seperate.
 
-Property only has two items for now, but that should be enough to get us going on being able to build everything out. Description may need changing so it can be formatted easier or something.
+template.json is a unique list of genuine propertys. propertyData uses the unique data from the templates to create multiple properties in each area so they appear more populated in search results.
 
 Here are some custom commands you can run from the client:
 
