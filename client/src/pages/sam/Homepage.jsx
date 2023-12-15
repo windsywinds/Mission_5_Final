@@ -1,74 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
 import banner from "../../assets/banner.jpg";
 import home1 from "../../assets/home1.png";
 import home2 from "../../assets/home2.png";
 
+//useContext component
+import HomeSearch from "./HomeSearch";
+
 export const Home = () => {
-  const [data, setData] = useState();
-  const [cities, setCities] = useState();
-  const [districts, setDistricts] = useState();
-  const [suburbs, setSuburbs] = useState();
-  const [selectedCity, setSelectedCity] = useState("");
-  const [selectedDistrict, setSelectedDistrict] = useState("");
-  const [selectedSuburb, setSelectedSuburb] = useState("");
-
-  const SERVER_URI =
-    import.meta.env.VITE_SERVER_URI || "http://localhost:8001/";
-
-  const getLocationData = async () => {
-    try {
-      const response = await fetch(SERVER_URI + "searchDatabase");
-      const data = await response.json();
-      //Set collection data
-      setData(data);
-      //Set city list
-      const allCities = [...new Set(data.map((item) => item.city))];
-      setCities(allCities);
-    } catch (error) {
-      console.log(`Error fetching data: ${error}`);
-    }
-  };
-
-  useEffect(() => {
-    getLocationData();
-  }, []);
-
-    // Update districts based on user selected city
-    useEffect(() => {
-      if (data && selectedCity) {
-        const cityData = data.filter((item) => item.city === selectedCity);
-        const allDistricts = [...new Set(cityData.map((item) => item.district))];
-        setDistricts(allDistricts);
-      }
-    }, [data, selectedCity]);
-
-  // Update suburbs based on user selected city and district
-  useEffect(() => {
-    if (data && selectedCity && selectedDistrict) {
-      const filteredData = data.filter(
-        (item) => item.city === selectedCity && item.district === selectedDistrict
-      );
-      const allSuburbs = [...new Set(filteredData.map((item) => item.suburb))];
-      setSuburbs(allSuburbs);
-    }
-  }, [data, selectedCity, selectedDistrict]);
-
-  const handleCitySelection = (e) => {
-    setSelectedCity(e.target.value);
-    setSelectedDistrict(""); // Reset user selections when user changes selections
-    setSelectedSuburb("");
-  };
-  const handleDistrictSelection = (e) => {
-    setSelectedDistrict(e.target.value);
-    setSelectedSuburb("");
-  };
-  const handleSuburbSelection = (e) => {
-    setSelectedSuburb(e.target.value);
-  };
-  const handleFormSubmit = (e) => {
-    //do stuff with selectedCity, selectedDistrict, selectedSuburb
-  }
 
   return (
     <div className="flex flex-col w-full items-center">
@@ -86,65 +26,8 @@ export const Home = () => {
         <h3 className="text-xl md:text-2xl font-semibold text-white py-6">
           Where are you planning to move to?
         </h3>
-
-        <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4"
-              onSubmit={handleFormSubmit}>
-          <select
-            className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-t-lg md:rounded-lg border-[1px] p-2"
-            id="city"
-            name="city"
-            defaultValue="City"
-            onChange={handleCitySelection}
-          >
-            <option disabled value="City">
-              City
-            </option>
-            {data && cities && 
-              cities.map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-          </select>
-          <select
-            className="w-full md:w-1/5 bg-white border-[#a6a6a6] md:rounded-lg border-[1px] p-2"
-            id="district"
-            name="district"
-            defaultValue="District"
-            onChange={handleDistrictSelection}
-          >
-            <option disabled>District</option>
-            {data && districts && 
-              districts.map((district) => (
-                <option key={district} value={district}>
-                  {district}
-                </option>
-              ))}
-          </select>
-          <select
-            className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-b-lg md:rounded-lg border-[1px] p-2"
-            id="suburb"
-            name="suburb"
-            defaultValue="Suburb"
-            onChange={handleSuburbSelection}
-          >
-            <option disabled>Suburb</option>
-            {data && suburbs &&
-              suburbs.map((suburb) => (
-                <option key={suburb} value={suburb}>
-                  {suburb}
-                </option>
-              ))}
-          </select>
-          <div className="flex w-full md:w-auto h-full items-center justify-center py-2">
-            <button className="bg-[#d70707] text-white rounded-lg py-1.5 w-[80%] md:w-auto md:px-4"
-                    type="submit">
-              Search
-            </button>
-          </div>
-        </form>
+          <HomeSearch />
       </div>
-
       <div className="bg-[#ececec] w-full flex flex-col md:flex-row items-center justify-evenly py-12  drop-shadow-lg">
         <div className="md:mt-16 md:w-1/3 drop-shadow-lg px-8 md:px-0">
           <img src={home1} className="" alt="An image of a house"/>
