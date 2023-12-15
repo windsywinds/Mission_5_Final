@@ -3,12 +3,12 @@
     "propertyID": "2SBD",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
     "image": [
-      "./images/2SBD/1.jpg",
-      "./images/2SBD/2.jpg",
-      "./images/2SBD/3.jpg",
-      "./images/2SBD/4.jpg",
-      "./images/2SBD/5.jpg",
-      "./images/2SBD/6.jpg"
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -36,12 +36,12 @@
     "propertyID": "50GD",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
     "image": [
-      "./images/4OMC/1.jpg",
-      "./images/4OMC/2.jpg",
-      "./images/4OMC/3.jpg",
-      "./images/4OMC/4.jpg",
-      "./images/4OMC/5.jpg",
-      "./images/4OMC/6.jpg"
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -69,9 +69,9 @@
     "propertyID": "3GFB",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
-      "./images/4MNS/1.jpg",
-      "./images/4MNS/2.jpg",
-      "./images/4MNS/3.jpg"
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -99,9 +99,9 @@
     "propertyID": "10GD",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
     "image": [
-      "./images/5PPF/1.jpg",
-      "./images/5PPF/2.jpg",
-      "./images/5PPF/3.jpg"
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -129,9 +129,9 @@
     "propertyID": "46AR",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
     "image": [
-      "./images/6AKF/1.jpg",
-      "./images/6AKF/2.jpg",
-      "./images/6AKF/3.jpg"
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -159,12 +159,12 @@
     "propertyID": "4OMC",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
     "image": [
-      "./images/4OMC/1.jpg",
-      "./images/4OMC/2.jpg",
-      "./images/4OMC/3.jpg",
-      "./images/4OMC/4.jpg",
-      "./images/4OMC/5.jpg",
-      "./images/4OMC/6.jpg"
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -192,9 +192,9 @@
     "propertyID": "3GFB",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
-      "./images/4MNS/1.jpg",
-      "./images/4MNS/2.jpg",
-      "./images/4MNS/3.jpg"
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -222,9 +222,9 @@
     "propertyID": "25GC",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
     "image": [
-      "./images/5PPF/1.jpg",
-      "./images/5PPF/2.jpg",
-      "./images/5PPF/3.jpg"
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -252,9 +252,9 @@
     "propertyID": "15KR",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
     "image": [
-      "./images/6AKF/1.jpg",
-      "./images/6AKF/2.jpg",
-      "./images/6AKF/3.jpg"
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Manukau City",
@@ -282,9 +282,9 @@
     "propertyID": "6LSM",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
     "image": [
-      "./images/6AKF/1.jpg",
-      "./images/6AKF/2.jpg",
-      "./images/6AKF/3.jpg"
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
     ],
     "city": "Auckland",
     "district": "North Shore City",
@@ -312,9 +312,9 @@
     "propertyID": "4MNS",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
-      "./images/4MNS/1.jpg",
-      "./images/4MNS/2.jpg",
-      "./images/4MNS/3.jpg"
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
     ],
     "city": "Auckland",
     "district": "North Shore City",
@@ -342,12 +342,12 @@
     "propertyID": "19PP",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
     "image": [
-      "./images/2SBD/1.jpg",
-      "./images/2SBD/2.jpg",
-      "./images/2SBD/3.jpg",
-      "./images/2SBD/4.jpg",
-      "./images/2SBD/5.jpg",
-      "./images/2SBD/6.jpg"
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
     ],
     "city": "Auckland",
     "district": "North Shore City",
@@ -375,12 +375,12 @@
     "propertyID": "15RA",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
     "image": [
-      "./images/4OMC/1.jpg",
-      "./images/4OMC/2.jpg",
-      "./images/4OMC/3.jpg",
-      "./images/4OMC/4.jpg",
-      "./images/4OMC/5.jpg",
-      "./images/4OMC/6.jpg"
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
     ],
     "city": "Auckland",
     "district": "North Shore City",
@@ -408,9 +408,9 @@
     "propertyID": "5PPF",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/pukekohe/listing/4467731024",
     "image": [
-      "./images/5PPF/1.jpg",
-      "./images/5PPF/2.jpg",
-      "./images/5PPF/3.jpg"
+      "/images/5PPF/1.jpg",
+      "/images/5PPF/2.jpg",
+      "/images/5PPF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
@@ -438,12 +438,12 @@
     "propertyID": "14CS",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
     "image": [
-      "./images/2SBD/1.jpg",
-      "./images/2SBD/2.jpg",
-      "./images/2SBD/3.jpg",
-      "./images/2SBD/4.jpg",
-      "./images/2SBD/5.jpg",
-      "./images/2SBD/6.jpg"
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
@@ -471,12 +471,12 @@
     "propertyID": "5PSC",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/flat-bush/listing/4466882121",
     "image": [
-      "./images/4OMC/1.jpg",
-      "./images/4OMC/2.jpg",
-      "./images/4OMC/3.jpg",
-      "./images/4OMC/4.jpg",
-      "./images/4OMC/5.jpg",
-      "./images/4OMC/6.jpg"
+      "/images/4OMC/1.jpg",
+      "/images/4OMC/2.jpg",
+      "/images/4OMC/3.jpg",
+      "/images/4OMC/4.jpg",
+      "/images/4OMC/5.jpg",
+      "/images/4OMC/6.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
@@ -504,9 +504,9 @@
     "propertyID": "6AKF",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/franklin/karaka/listing/4434410912",
     "image": [
-      "./images/6AKF/1.jpg",
-      "./images/6AKF/2.jpg",
-      "./images/6AKF/3.jpg"
+      "/images/6AKF/1.jpg",
+      "/images/6AKF/2.jpg",
+      "/images/6AKF/3.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
@@ -534,9 +534,9 @@
     "propertyID": "86KP",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
-      "./images/4MNS/1.jpg",
-      "./images/4MNS/2.jpg",
-      "./images/4MNS/3.jpg"
+      "/images/4MNS/1.jpg",
+      "/images/4MNS/2.jpg",
+      "/images/4MNS/3.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
@@ -564,12 +564,12 @@
     "propertyID": "6TLK",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/manukau-city/botany-downs/listing/4463163213",
     "image": [
-      "./images/2SBD/1.jpg",
-      "./images/2SBD/2.jpg",
-      "./images/2SBD/3.jpg",
-      "./images/2SBD/4.jpg",
-      "./images/2SBD/5.jpg",
-      "./images/2SBD/6.jpg"
+      "/images/2SBD/1.jpg",
+      "/images/2SBD/2.jpg",
+      "/images/2SBD/3.jpg",
+      "/images/2SBD/4.jpg",
+      "/images/2SBD/5.jpg",
+      "/images/2SBD/6.jpg"
     ],
     "city": "Auckland",
     "district": "Franklin",
