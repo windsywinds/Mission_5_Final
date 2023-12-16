@@ -11,7 +11,7 @@ import HomeSearch from "./HomeSearch";
 export const Home = () => {
 
   return (
-    <div className="flex flex-col w-full items-center">
+    <div className="flex flex-col w-[full] items-center justify-center">
       <div
         className={`flex flex-col w-full h-[20rem] md:h-[20rem] items-center justify-center`}
         style={{
@@ -73,6 +73,42 @@ export const Home = () => {
           </p>
         </div>
       </div>
+
+      <div className="w-full flex flex-col bg-black h-[500px] text-white items-center justify-center">
+  <div className="">
+    <h1 className="text-5xl py-12 text-left">How To Apply For A Rental Property</h1>
+  </div>
+  <div className="w-[90%] md:w-[80%] flex flex-col items-center justify-center border-2 border-pink-500">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
+        <p>Icon</p>
+        <p>Book a Viewing</p>
+        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      </div>
+
+      <div className="bg-[#404040] h-64 w-4/6 md:w-5/6 md:h-64">
+        <p><img src="https://www.figma.com/file/nJin9GiTO6GAy6QBBpwCa7/High-Fidelity-Prototype-for-Metro-NZ-Redesign?type=design&node-id=186-184&mode=design&t=mk5AvhTJE5KKhuv0-4"/></p>
+        <p>Book a Viewing</p>
+        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      </div>
+
+      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
+        <p>Icon</p>
+        <p>Book a Viewing</p>
+        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      </div>
+
+      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
+        <p>Icon</p>
+        <p>Book a Viewing</p>
+        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </div>
   );
 };
