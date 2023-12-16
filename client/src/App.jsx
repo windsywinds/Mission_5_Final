@@ -10,28 +10,28 @@ import { Header } from './pages/nils/Header'
 //Homepage
 import { Home } from './pages/sam/Homepage';
 //Search results page
-import { Results } from './pages/sam/Results';
+// <Route path="/results" element={<Results/>} />
 //Property listing page
 
 //Booking page
 
 //Footer
+import { Footer } from './pages/sam/Footer';
 
 function App() {
   return (
-    <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen items-center">
+    <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen overflow-x-hidden items-center">
       <Router>
-      <Header />
         <SearchProvider>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/results" element={<Results/>} />
+            {/* Page route for results <Route path="/results" element={<Results/>} */}
             {/* Page route for listings path="/listing/:id" element= */}
             {/* Page route for bookings path="/booking/:id" element= */}
           </Routes>
         </SearchProvider>
+        {!window.location.pathname || window.location.pathname === '/' ? null : <Footer />}
       </Router>
-      {/* Footer goes here */}
     </div>
   );
 }
