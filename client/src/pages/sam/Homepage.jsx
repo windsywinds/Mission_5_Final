@@ -20,11 +20,11 @@ export const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-white py-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-white text-center mt-12 py-6">
           Find&nbsp;Your&nbsp;Dream Rental&nbsp;Home&nbsp;Today
         </h2>
-        <h3 className="text-xl md:text-2xl font-semibold text-white py-6">
-          Where are you planning to move to?
+        <h3 className="text-xl md:text-2xl font-semibold text-white text-center py-6">
+          Where&nbsp;are&nbsp;you planning&nbsp;to&nbsp;move&nbsp;to?
         </h3>
           <HomeSearch />
       </div>
