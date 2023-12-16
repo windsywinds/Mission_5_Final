@@ -69,10 +69,10 @@ const HomeSearch = () => {
 
   return (
  
-    <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4"
+    <form className="flex flex-col md:flex-row w-[70%]  items-center justify-center md:space-x-4 mb-12"
     onSubmit={handleFormSubmit}>
 <select
-  className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-t-lg md:rounded-lg border-[1px] p-2"
+  className="w-full md:w-1/5 bg-white border-[#a6a6a6] text-sm sm:text-md rounded-t-lg md:rounded-lg border-[1px] p-2"
   id="city"
   name="city"
   value={selectedCity}
@@ -89,7 +89,7 @@ const HomeSearch = () => {
     ))}
 </select>
 <select
-  className="w-full md:w-1/5 bg-white border-[#a6a6a6] md:rounded-lg border-[1px] p-2"
+  className="w-full md:w-1/5 bg-white border-[#a6a6a6] text-sm sm:text-md md:rounded-lg border-[1px] p-2"
   id="district"
   name="district"
   value={selectedDistrict}
@@ -104,7 +104,7 @@ const HomeSearch = () => {
     ))}
 </select>
 <select
-  className="w-full md:w-1/5 bg-white border-[#a6a6a6] rounded-b-lg md:rounded-lg border-[1px] p-2"
+  className="w-full md:w-1/5 bg-white border-[#a6a6a6] text-sm sm:text-md rounded-b-lg md:rounded-lg border-[1px] p-2"
   id="suburb"
   name="suburb"
   value={selectedSuburb}
@@ -119,7 +119,7 @@ const HomeSearch = () => {
     ))}
 </select>
 <div className="flex w-full md:w-auto h-full items-center justify-center py-2">
-  <button className="bg-[#d70707] text-white rounded-lg py-1.5 w-[80%] md:w-auto md:px-4"
+  <button className="bg-[#d70707] text-white text-sm sm:text-md rounded-lg py-1.5 w-[80%] md:w-auto md:px-4"
           type="submit">
     Search
   </button>

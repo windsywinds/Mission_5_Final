@@ -16,14 +16,14 @@ export const Home = () => {
   return (
     <div className="flex flex-col w-[full] items-center justify-center">
       <div
-        className={`flex flex-col w-full h-[20rem] md:h-[20rem] items-center justify-center`}
+        className={`flex flex-col w-full h-[22rem] md:h-[20rem] items-center justify-center`}
         style={{
           backgroundImage: `url(${banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-white text-center mt-12 py-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-white text-center mt-12 sm:py-6">
           Find&nbsp;Your&nbsp;Dream Rental&nbsp;Home&nbsp;Today
         </h2>
         <h3 className="text-xl md:text-2xl font-semibold text-white text-center py-6">
@@ -32,12 +32,12 @@ export const Home = () => {
           <HomeSearch />
       </div>
       <div className="bg-[#ececec] w-full flex flex-col md:flex-row items-center justify-evenly py-12  drop-shadow-lg">
-        <div className="md:mt-16 md:w-1/3 drop-shadow-lg px-8 md:px-0">
+        <div className="md:mt-16 md:w-1/3 drop-shadow-lg px-4 md:px-0">
           <img src={home1} className="" alt="An image of a house"/>
         </div>
         <div className="h-full flex flex-col md:w-1/3 space-y-8 px-6 pt-4 md:pt-0 md:justify-center">
-          <h2 className="text-3xl font-bold">Our Mission</h2>
-          <p>
+          <h2 className="text-2xl md:text-3xl font-bold">Our Mission</h2>
+          <p className="text-sm">
             At Metro NZ Property Management we encompass several key elements
             aimed at providing a comprehensive and user friendly platform for
             both property owners and tenants.
@@ -57,12 +57,12 @@ export const Home = () => {
         </div>
       </div>
       <div className="w-full flex flex-col md:flex-row-reverse md:flex-row items-center justify-evenly py-12">
-        <div className="md:w-1/3 drop-shadow-lg px-8 md:px-0">
+        <div className="md:w-1/3 drop-shadow-lg px-4 md:px-0">
           <img src={home2} className="" alt="An image of a house"/>
         </div>
         <div className="h-full flex flex-col md:w-1/3 space-y-8 px-6 pt-4 md:pt-0 md:justify-center">
-          <h2 className="text-3xl font-bold">Outstanding Properties</h2>
-          <p>
+          <h2 className="text-2xl md:text-3xl font-bold">Outstanding Properties</h2>
+          <p className="text-sm">
             Our properties have exceptional features that makes a rental
             property highly desirable and attractive.
             <br />
