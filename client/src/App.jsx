@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SearchProvider } from './pages/sam/searchContext';
 
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
-
+import { Header } from './pages/nils/Header'
 
 //Navigation pages flow required:
 //Homepage
@@ -18,7 +18,7 @@ import { Results } from './pages/sam/Results';
 function App() {
   return (
     <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen items-center">
-      {/* Header goes here */}
+      <Header />
       <Router>
         <SearchProvider>
           <Routes>
