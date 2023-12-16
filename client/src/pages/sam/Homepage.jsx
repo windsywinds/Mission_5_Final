@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import banner from "../../assets/banner.jpg";
 import home1 from "../../assets/home1.png";
 import home2 from "../../assets/home2.png";
+import quill_paper from "../../assets/quill_paper.svg";
+import homeIcon from '../../assets/home-icon.svg'
+
 
 //useContext component
 import HomeSearch from "./HomeSearch";
@@ -74,34 +77,39 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col bg-black h-[500px] text-white items-center justify-center">
-  <div className="">
-    <h1 className="text-5xl py-12 text-left">How To Apply For A Rental Property</h1>
+      <div className="w-full flex flex-col bg-black h-full pb-12 text-white items-center justify-center">
+  <div className="flex w-full items-center justify-center">
+    <h2 className="text-3xl font-semibold py-12 text-left w-[90%]">How To Apply For A Rental Property</h2>
   </div>
-  <div className="w-[90%] md:w-[80%] flex flex-col items-center justify-center border-2 border-pink-500">
+  <div className="w-[90%] flex flex-col items-center justify-center">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
-        <p>Icon</p>
-        <p>Book a Viewing</p>
-        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+
+      <div className="bg-[#404040] flex flex-col h-full py-12 items-center text-center gap-y-4 px-4 relative">
+        <p className="z-10 text-4xl font-bold absolute top-4 left-4">1</p>
+        <img   className="mt-6 max-h-20" src={homeIcon} />
+        <h4 className="text-lg font-semibold">Book a Viewing</h4>
+        <p className="text-sm">Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
       </div>
 
-      <div className="bg-[#404040] h-64 w-4/6 md:w-5/6 md:h-64">
-        <p><img src="https://www.figma.com/file/nJin9GiTO6GAy6QBBpwCa7/High-Fidelity-Prototype-for-Metro-NZ-Redesign?type=design&node-id=186-184&mode=design&t=mk5AvhTJE5KKhuv0-4"/></p>
-        <p>Book a Viewing</p>
-        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      <div className="bg-[#404040] flex flex-col h-full py-12 items-center text-center gap-y-4 px-4 relative">
+      <p className="z-10 text-4xl font-bold absolute top-4 left-4">2</p>
+        <img className="mt-6 max-h-20" src={quill_paper} />
+        <h4 className="text-lg font-semibold">Complete The Tenancy Application</h4>
+        <p className="text-sm">Decided this is the right property? Simply fill in and submit you the tenancy application form.</p>
       </div>
 
-      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
-        <p>Icon</p>
-        <p>Book a Viewing</p>
-        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      <div className="bg-[#404040] flex flex-col h-full py-12 items-center text-center gap-y-4 px-4 relative">
+      <p className="z-10 text-4xl font-bold absolute top-4 left-4">3</p>
+        <img className="mt-6 max-h-20" src={homeIcon} />
+        <h4 className="text-lg font-semibold">We’ll Assess your Application </h4>
+        <p className="text-sm">Our team will assess whether if this is the right property for you. If not, we’ll offer you alternative properties suited to your needs.</p>
       </div>
 
-      <div className="bg-[#404040] h-64 w-4/6  md:w-5/6 md:h-64">
-        <p>Icon</p>
-        <p>Book a Viewing</p>
-        <p>Found a property you're interested in? Book in a time in our calendar to arrange for a viewing.</p>
+      <div className="bg-[#404040] flex flex-col h-full py-12 items-center px-4 text-center gap-y-4 relative">
+      <p className="z-10 text-4xl font-bold absolute top-4 left-4">4</p>
+      <img className="mt-6 max-h-20" src={quill_paper} />
+        <h4 className="text-lg font-semibold">Sign The Tenancy Agreement</h4>
+        <p className="text-sm">Once your application is successful, simply sign the tenancy agreement and congratulation, welcome to your new home.</p>
       </div>
     </div>
   </div>
