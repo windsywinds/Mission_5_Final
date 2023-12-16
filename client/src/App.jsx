@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SearchProvider } from './pages/sam/searchContext';
 
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
-import { Header } from './pages/nils/Header'
 
-//Navigation pages flow required:
+
+//Navigation pages flow required inside <Router>:
+import { Header } from './pages/nils/Header'
 //Homepage
 import { Home } from './pages/sam/Homepage';
 //Search results page
@@ -14,12 +15,13 @@ import { Results } from './pages/sam/Results';
 
 //Booking page
 
+//Footer
 
 function App() {
   return (
     <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen items-center">
-      <Header />
       <Router>
+      <Header />
         <SearchProvider>
           <Routes>
             <Route path="/" element={<Home />} />
