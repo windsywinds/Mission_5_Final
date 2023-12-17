@@ -25,7 +25,7 @@ export const Footer = () => {
     }
 
     return(
-        <div className="flex flex-col lg:flex-row w-full bg-black absolute bottom-0 left-0 right-0 py-12 text-white items-center md:justify-between">
+        <div className="flex flex-col lg:flex-row w-full bg-black bottom-0 left-0 right-0 py-12 text-white items-center md:justify-between">
             
             <div className="flex flex-row w-full px-12 lg:px-0 lg:w-1/2 lg:ml-6 items-center justify-between">
                 <div className="flex flex-col  space-y-2">
