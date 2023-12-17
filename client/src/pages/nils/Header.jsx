@@ -1,12 +1,13 @@
-import React from "react";
 import metroLogo from "../../assets/metro-logo.svg";
 import downArrow from "../../assets/down-arrow.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import hamburger from "../../assets/hamburger.svg";
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleResize = () => {
     if (window.innerWidth >= 768) {
@@ -28,7 +29,11 @@ export const Header = () => {
     <div className=" flex flex-col justify-between ">
       {/* Phone view */}
       <div className=" md:hidden w-screen flex flex-row justify-between ">
-        <img className="flex w-[4.75rem] pl-5 pt-2 pb-1" src={metroLogo} />
+        <img
+          className="flex w-[4.75rem] pl-5 pt-2 pb-1 cursor-pointer"
+          src={metroLogo}
+          onClick={() => navigate("/")}
+        />
         <button
           className="flex h-5 pr-5 pt-1.5"
           onClick={() => setIsOpen(!isOpen)}
@@ -67,7 +72,11 @@ export const Header = () => {
       {/* monitor view */}
 
       <div className=" hidden md:flex w-screen flex-row  ">
-        <img className="h-11 pl-[18vw] pt-2 pr-[7.8rem]" src={metroLogo} />
+        <img
+          className="h-11 pl-[18vw] pt-2 pr-[7.8rem] cursor-pointer"
+          src={metroLogo}
+          onClick={() => navigate("/")}
+        />
         <div className=" text-[.687rem] font-normal font-['Inter'] flex flex-row items-center ">
           <div className="pr-5">Rental Property Search</div>
           <div className="pr-5">Property Management Services</div>
