@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { SearchProvider } from './pages/Homepage/searchContext';
 
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
