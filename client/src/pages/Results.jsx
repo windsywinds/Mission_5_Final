@@ -27,9 +27,9 @@ export const Results = () => {
       };
 
     //send user to the page of the listing they choose
-    const handleListingSelection = (e) => {
-        e.preventDefault()
-        navigate('/listing');
+    const handleListingSelection = (property) => {
+      //you can use useParams on the listing page to get the propertyID and route like this
+        navigate(`/listing/${property.propertyID}`); 
       };
     
     return(
