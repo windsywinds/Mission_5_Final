@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
-import bedIcon from '../../../assets/bed-icon.svg'
-import bathIcon from '../../../assets/bath-icon.svg'
-import garageIcon from '../../../assets/garage-icon.svg'
+import bedIcon from '../../assets/bed-icon.svg'
+import bathIcon from '../../assets/bath-icon.svg'
+import garageIcon from '../../assets/garage-icon.svg'
 
 export const PreviewCard = ({ property }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
