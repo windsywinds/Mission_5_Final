@@ -1,7 +1,7 @@
 
 //imports the users variables they set on the homepage search
 import { useState } from 'react';
-import {UserSearchTerms} from './sam/searchContext'
+import {UserSearchTerms} from './Homepage/searchContext'
 
 import { useNavigate } from 'react-router-dom';
 

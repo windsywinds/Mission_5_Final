@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { SearchProvider } from './pages/sam/searchContext';
+import { SearchProvider } from './pages/Homepage/searchContext';
 
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
 
@@ -8,7 +8,7 @@ import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB,
 //Navigation pages flow required inside <Router>:
 import { Header } from './pages/nils/Header'
 //Homepage
-import { Home } from './pages/sam/Homepage';
+import { Home } from './pages/Homepage/Homepage';
 //Search results page
 
 // <Route path="/results" element={<Results/>} />
@@ -17,7 +17,7 @@ import { Home } from './pages/sam/Homepage';
 //Booking page
 
 //Footer
-import { Footer } from './pages/sam/Footer';
+import { Footer } from './pages/Footer/Footer';
 
 
 function App() {
