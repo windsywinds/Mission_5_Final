@@ -66,7 +66,7 @@
     "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
   },
   {
-    "propertyID": "3GFB",
+    "propertyID": "3SPB",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
       "/images/4MNS/1.jpg",
@@ -76,10 +76,10 @@
     "city": "Auckland",
     "district": "Manukau City",
     "suburb": "Botany Downs",
-    "address": "3 Greenbrooke Drive",
+    "address": "3 Sheffield Place",
     "geolocation": {
-      "latitude": -36.958979,
-      "longitude": 174.920735
+      "latitude": -36.907886,
+      "longitude": 174.917548
     },
     "slug": "Newly renovated brick-and-tile unit.",
     "price": 560,
@@ -189,7 +189,7 @@
     "description": "This expansive family home offers 5 double bedrooms and 3 full bathrooms split over 2 levels and will be ready soon for its new occupants in the New Year. Offering an open plan kitchen, dining and 2 living areas which flows out in private backyard for the whole family to enjoy. Extra features include: Separate laundry; Secure double garage; lock up garden shed. Located on a quiet, desirable street in Flat Blush in close proximity to local schools, shops, parks, and public transport. This property is the perfect home for any family wanting to rent in Flat Bush."
   },
   {
-    "propertyID": "3GFB",
+    "propertyID": "1PFB",
     "link": "https://www.trademe.co.nz/a/property/residential/rent/auckland/north-shore-city/milford/listing/4468336568",
     "image": [
       "/images/4MNS/1.jpg",
@@ -199,7 +199,7 @@
     "city": "Auckland",
     "district": "Manukau City",
     "suburb": "Flat Bush",
-    "address": "3 Greenbrooke Drive",
+    "address": "1 Plantation Drive",
     "geolocation": {
       "latitude": -36.958979,
       "longitude": 174.920735
