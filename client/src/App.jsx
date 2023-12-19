@@ -7,7 +7,7 @@ import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB,
 //Navigation pages flow required inside <Router>:
 import { Header } from "./pages/nils/header";
 //Homepage
-import { Home } from "./pages/sam/Homepage";
+import { Home } from "./pages/Homepage/Homepage";
 //Search results page
 
 // <Route path="/results" element={<Results/>} />
@@ -17,8 +17,6 @@ import { Home } from "./pages/sam/Homepage";
 import { BookingPage } from "./pages/nils/Bookingpage";
 //Footer
 import { Footer } from "./pages/sam/Footer";
-//Search Page
-import Searchpage from "./pages/toby/Searchpage";
 
 function App() {
     //sends user to /home as the landing page so that the Footer does not render on the homepage
@@ -39,7 +37,6 @@ function App() {
                     {/* Page route for results <Route path="/results" element={<Results/>} */}
                     {/* Page route for listings path="/listing/:id" element= */}
                     <Route path="/booking/:id" element={<BookingPage />} />
-                    <Route path="/search" element={<Searchpage />} />
                 </Routes>
                 {location.pathname === "/home" ? null : <Footer />}
             </SearchProvider>

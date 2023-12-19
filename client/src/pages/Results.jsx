@@ -1,7 +1,7 @@
 
 //imports the users variables they set on the homepage search
 import { useState } from 'react';
-import {UserSearchTerms} from './sam/searchContext'
+import {UserSearchTerms} from './Homepage/searchContext'
 
 import { useNavigate } from 'react-router-dom';
 
@@ -27,9 +27,9 @@ export const Results = () => {
       };
 
     //send user to the page of the listing they choose
-    const handleListingSelection = (e) => {
-        e.preventDefault()
-        navigate('/listing');
+    const handleListingSelection = (property) => {
+      //you can use useParams on the listing page to get the propertyID and route like this
+        navigate(`/listing/${property.propertyID}`); 
       };
     
     return(
