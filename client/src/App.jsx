@@ -5,7 +5,7 @@ import { SearchProvider } from './pages/Homepage/searchContext';
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
 
 //Navigation pages flow required inside <Router>:
-import { Header } from "./pages/nils/header";
+import { Header } from "./pages/nils/Header";
 //Homepage
 import { Home } from './pages/Homepage/Homepage';
 //Search results page
@@ -14,7 +14,7 @@ import { Home } from './pages/Homepage/Homepage';
 //Property listing page
 
 //Booking page
-import { BookingPage } from "./pages/nils/Bookingpage";
+import { BookingPage } from "./pages/nils/BookingPage";
 //Footer
 import { Footer } from './pages/Footer/Footer';
 
