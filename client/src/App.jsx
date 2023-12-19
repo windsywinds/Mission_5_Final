@@ -41,7 +41,7 @@ function App() {
 
           {/* Page route for results <Route path="/results" element={<Results/>} */}
           {/* Page route for listings path="/listing/:id" element= */}
-          <Route path="/booking/:id" element={<BookingPage />} />
+          <Route path="/booking/:propertyID" element={<BookingPage />} />
         </Routes>
         {location.pathname === "/home" ? null : <Footer />}
       </SearchProvider>

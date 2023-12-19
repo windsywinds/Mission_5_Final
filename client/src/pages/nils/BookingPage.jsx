@@ -1,8 +1,30 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import arrow from "../../assets/arrow.svg";
+import { getData } from "../services/getData";
 
 export const BookingPage = () => {
+  const { propertyID } = useParams();
+  const [property, setProperty] = useState(null);
+
+  useEffect(() => {
+    const fetchPropertyData = async () => {
+      try {
+        const data = await getData();
+        const currentListing = data.find(
+          (item) => item.propertyID === propertyID
+        );
+        setProperty(currentListing);
+      } catch (error) {
+        console.log("there was an error fetching property data", error);
+      }
+      if (propertyID) {
+        fetchPropertyData();
+      }
+    };
+    [propertyID];
+  });
+
   return (
     <div className=" flex-col w-[90%] md:w-[80%] relative justify-center">
       <button className="flex items-center my-8">
@@ -14,6 +36,11 @@ export const BookingPage = () => {
           <h1 className="pr-6">You are booking a viewing for:</h1>
           <div className=" bg-[#d70707] text-white rounded-lg py-1.5 w-full h-[15rem] md:w-[49%] px-4 ">
             <h1 className="pr-6">place holder</h1>
+            {property && (
+              <div>
+                {property.address} {property.description}
+              </div>
+            )}
           </div>
         </div>
         <div className="h-10 bg-[#d70707] text-white rounded-lg py-1.5 w-full  md:w-[49%] px-4">
