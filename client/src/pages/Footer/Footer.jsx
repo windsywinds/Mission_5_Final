@@ -17,16 +17,15 @@ export const Footer = () => {
 
   const handleformSubmit = (e) => {
     e.preventDefault();
-    setMessage(true);
-    nameRef.current.value = "";
+    setMessage(true); //show fake success message
+    nameRef.current.value = ""; //clears form values
     emailRef.current.value = "";
     subjectRef.current.value = "";
     messageRef.current.value = "";
   };
 
   return (
-    <div className="flex flex-col lg:flex-row w-full bg-black  bottom-0 left-0 right-0 py-12 text-white items-center md:justify-between">
-      {/* i have removed absolute as it was causing the footer to cover BookingPage. is that ok ? */}
+    <div className="flex flex-col lg:flex-row w-full bg-black py-12 text-white items-center md:justify-between">
       <div className="flex flex-row w-full px-12 lg:px-0 lg:w-1/2 lg:ml-6 items-center justify-between">
         <div className="flex flex-col  space-y-2">
           <img className="bg-white" src={logo}></img>
@@ -62,6 +61,7 @@ export const Footer = () => {
           <a href="#">News</a>
         </div>
       </div>
+
       <form
         className="flex flex-col w-[90%] md:w-2/5 md:mr-6 items-center space-y-6"
         onSubmit={handleformSubmit}
