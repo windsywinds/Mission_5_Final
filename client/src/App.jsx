@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import { SearchProvider } from "./pages/Homepage/searchContext";
 
 import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
@@ -18,28 +23,28 @@ import { BookingPage } from "./pages/nils/BookingPage";
 import { Footer } from "./pages/Footer/Footer";
 
 function App() {
-    //sends user to /home as the landing page so that the Footer does not render on the homepage
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (location.pathname === "/") {
-            navigate("/home");
-        }
-    });
+  //sends user to /home as the landing page so that the Footer does not render on the homepage
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (location.pathname === "/") {
+      navigate("/home");
+    }
+  });
 
-    return (
-        <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen overflow-x-hidden items-center">
-            <SearchProvider>
-                <Header />
-                <Routes>
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/search" element={<Searchpage />} />
-                    <Route path="/listing/:propertyID" element={<ListingPage />} />
-                    <Route path="/booking/:propertyID" element={<BookingPage />} />
-                </Routes>
-                {location.pathname === "/home" ? null : <Footer />}
-            </SearchProvider>
-        </div>
-    );
+  return (
+    <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen overflow-x-hidden items-center">
+      <SearchProvider>
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<Searchpage />} />
+          <Route path="/listing/:propertyID" element={<ListingPage />} />
+          <Route path="/booking/:propertyID" element={<BookingPage />} />
+        </Routes>
+        {location.pathname === "/home" ? null : <Footer />}
+      </SearchProvider>
+    </div>
+  );
 }
 
 export default App;
