@@ -32,7 +32,7 @@ function App() {
   });
 
   return (
-    <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen overflow-x-hidden items-center">
+    <div className="bg-white flex flex-col text-black font-normal font-inter h-full w-screen overflow-x-hidden items-center">
       <SearchProvider>
         <Header />
         <Routes>
