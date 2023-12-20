@@ -31,6 +31,7 @@ function App() {
     }
   });
 
+
     return (
         <div className="bg-white flex flex-col text-black font-normal font-inter h-full w-screen overflow-x-hidden items-center">
             <SearchProvider>
@@ -45,6 +46,7 @@ function App() {
             </SearchProvider>
         </div>
     );
+
 }
 
 export default App;
