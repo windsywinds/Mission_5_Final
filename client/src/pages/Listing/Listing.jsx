@@ -79,9 +79,9 @@ export const ListingPage = () => {
 </button>
                 </div>
 
-                <div className="flex flex-row w-2/3 justify-between mt-6 ">
+                <div className="flex flex-col lg:flex-row w-full lg:w-2/3 items-center  md:justify-between mt-6">
 
-                    <div className="flex flex-col w-[65%] ">
+                    <div className="flex flex-col w-[90%] lg:w-[65%] ">
                         <div className="flex flex-row w-full">
                             <h5 className="my-2 w-1/2">{[property.address, property.suburb, property.city].filter(Boolean).join(', ')}</h5>
                             <p className="my-2 w-1/2 text-right">${property.price} per week</p>
@@ -103,9 +103,9 @@ export const ListingPage = () => {
                         
                         <div className="w-full border-b-2 my-4"></div>
 
-                        <div className="flex flex-col w-2/3 space-y-4">
+                        <div className="flex flex-col w-full md:w-2/3 space-y-4">
                             <div className="flex flex-row w-full text-left">
-                                <p className="flex w-1/2 text-left">Accomodation</p> <p>{property.bedrooms} bedrooms, {property.bathrooms} bathrooms</p>
+                                <p className="flex w-1/2 text-left">Accomodation</p> <p className="">{property.bedrooms} bedrooms, {property.bathrooms} bathrooms</p>
                             </div>
                             <div className="flex flex-row w-full text-left">
                                 <p className="flex w-1/2 text-left">Rent</p> <p className="">${property.price} per week</p>
@@ -132,7 +132,7 @@ export const ListingPage = () => {
                     </div>
 
 
-                    <div className="flex flex-col flex-grow max-w-[30%]">
+                    <div className="flex flex-col flex-grow w-[80%] md:max-w-[30%]">
 
                         <div className="flex flex-col w-full bg-white drop-shadow-[0px_5px_10px_rgba(0,0,0,0.25)] mb-8">
                             <div className="flex flex-col w-full mx-4 my-2 gap-y-1 text-xs">
