@@ -14,7 +14,8 @@
     "prettier-toby": "prettier ./src/pages/toby/* --write",
     "server": "cd ../server && npm run server",
     "seed": "node ../server/cli/cli.cjs seed ../server/data/propertyData.json",
-    "both": "concurrently \"npm run server\" \"npm run dev\""
+    "both": "concurrently \"npm run server\" \"npm run dev\"",
+    "test": "jest  --coverage"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.19.2",
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.2",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",

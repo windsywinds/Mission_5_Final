@@ -5,8 +5,8 @@ const { MongoClient } = require("mongodb");
 
 jest.mock('mongodb');
 
-const messages = require("./routes/messages.js");
-const newMessage = require("./routes/newMessage.js");
+const seedDatabase = require("./routes/seedDatabase.js");
+const searchDatabase = require("./routes/searchDatabase.js");
 const landing = require("./routes/landing.js");
 
 const app = express();
@@ -31,8 +31,8 @@ afterAll(async () => {
   });
 
 app.get("/", landing);
-app.use("/messages", messages);
-app.use("/new", newMessage);
+app.use("/seedDatabase", seedDatabase);
+app.use("/searchDatabase", searchDatabase);
 
 describe("Check the existence and operation of the server", () => {
   it("#1 route should exist and be a function", () => {
