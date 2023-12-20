@@ -11,7 +11,7 @@ import { Home } from "./pages/Homepage/Homepage";
 //Search results page
 import Searchpage from "./pages/toby/Searchpage";
 //Property listing page
-
+import { ListingPage } from "./pages/Listing/Listing";
 //Booking page
 import { BookingPage } from "./pages/nils/BookingPage";
 //Footer
@@ -33,8 +33,8 @@ function App() {
                 <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/search" element={<Searchpage />} />
-                    {/* Page route for listings path="/listing/:id" element= */}
-                    <Route path="/booking/:id" element={<BookingPage />} />
+                    <Route path="/listing/:propertyID" element={<ListingPage />} />
+                    <Route path="/booking/:propertyID" element={<BookingPage />} />
                 </Routes>
                 {location.pathname === "/home" ? null : <Footer />}
             </SearchProvider>
