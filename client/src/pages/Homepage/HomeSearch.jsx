@@ -67,7 +67,7 @@ const HomeSearch = () => {
     ];
     updateSearch(combinedWord);
     console.log(combinedWord);
-    navigate("/results");
+    navigate("/search");
   };
 
   return (
