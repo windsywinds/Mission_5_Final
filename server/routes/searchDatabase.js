@@ -8,7 +8,7 @@ const router = express.Router();
 
 //This route handles searching the entire database collection
 
-const MONGOURI = process.env.MONGOURI || "mongodb://localhost:27017/";
+const MONGOURI = process.env.MONGOURI || "mongodb://127.0.0.1:27017/";
 // Variables for connection to MongoDB
 const DB_NAME = "M5PropertyDB";
 const COLLECTION_NAME = "rentals";

@@ -73,6 +73,7 @@ MONGOURI="mongodb://mongo:27017"
 Client:
 ```sh
 VITE_SERVER_URI=http://localhost:8001/
+VITE_GOOGLE_MAPS_API_KEY=<YOUR_GOOGLE_MAPS_API_KEY>
 ```
 
 <h4>3. Install packages for both client and server directorys.</h4>
