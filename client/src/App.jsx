@@ -31,20 +31,22 @@ function App() {
     }
   });
 
-  return (
-    <div className="bg-white flex flex-col text-black font-normal font-inter h-full w-screen overflow-x-hidden items-center">
-      <SearchProvider>
-        <Header />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/search" element={<Searchpage />} />
-          <Route path="/listing/:propertyID" element={<ListingPage />} />
-          <Route path="/booking/:propertyID" element={<BookingPage />} />
-        </Routes>
-        {location.pathname === "/home" ? null : <Footer />}
-      </SearchProvider>
-    </div>
-  );
+
+    return (
+        <div className="bg-white flex flex-col text-black font-normal font-inter h-full w-screen overflow-x-hidden items-center">
+            <SearchProvider>
+                <Header />
+                <Routes>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/search" element={<Searchpage />} />
+                    <Route path="/listing/:propertyID" element={<ListingPage />} />
+                    <Route path="/booking/:propertyID" element={<BookingPage />} />
+                </Routes>
+                {location.pathname === "/home" ? null : <Footer />}
+            </SearchProvider>
+        </div>
+    );
+
 }
 
 export default App;
