@@ -42,8 +42,7 @@ export const ListingPage = () => {
   }, [propertyID]);
 
   const returnToResults = () => {
-    //not working, broken: add '/' behind results and check again
-    //navigate(`/search/`);
+    navigate(`/search/`);
   }
 
   const onClickRight = (e) => {
@@ -58,8 +57,6 @@ export const ListingPage = () => {
     navigate(`/booking/${propertyID}`);
   }
 
-  console.log("property out:", property) //this shows the entry array
-  console.log("property out:", propertyID) //this shows the correct value but on /bookings/ it is undefined [object object]
     return(
         <div className="flex flex-col w-full h-full items-center pt-8 mb-8">
             <div className="flex w-2/3 items-left cursor-pointer" onClick={returnToResults}>
@@ -70,10 +67,16 @@ export const ListingPage = () => {
     {property && 
             <div className="flex flex-col w-full h-full mt-6 items-center">
                 <div className="flex flex-row w-full h-full items-center  justify-center">
-                    <button className="bg-[#d70707] -mr-5 z-10 relative py-5 px-5 w-6 h-6 flex items-center justify-center text-white rounded-full" onClick={onClickLeft}>Prev</button>
+                <button className="bg-[#d70707] -mr-5 z-10 relative py-0 px-0 w-8 h-8 flex items-center justify-center text-white rounded-full" onClick={onClickLeft}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+</button>
+
                     <div className="w-2/3 h-[32rem] items-center">
                         <img className="h-full w-full object-cover" src={`..${property.image[propertyImage]}`} alt="Property Image" /></div>
-                    <button className="bg-[#d70707] -ml-5 z-10 relative py-5 px-5 w-6 h-6 flex items-center justify-center text-white rounded-full" onClick={onClickRight}>Next</button>
+                    <button className="bg-[#d70707] -ml-5 z-10 relative py-0 px-0 w-8 h-8 flex items-center justify-center text-white rounded-full" onClick={onClickRight}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" className="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+</svg>
+</button>
                 </div>
 
                 <div className="flex flex-row w-2/3 justify-between mt-6 ">
