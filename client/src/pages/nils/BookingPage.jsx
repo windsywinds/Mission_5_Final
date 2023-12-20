@@ -1,22 +1,77 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import arrow from "../../assets/arrow.svg";
+import bath from "../../assets/bath-icon.svg";
+import bed from "../../assets/bed-icon.svg";
+
+import { getData } from "../services/getData";
 
 export const BookingPage = () => {
+  const { propertyID } = useParams();
+  const [property, setProperty] = useState(null);
+
+  useEffect(() => {
+    const fetchPropertyData = async () => {
+      try {
+        const data = await getData();
+        const currentListing = data.find(
+          (item) => item.propertyID === propertyID
+        );
+        setProperty(currentListing);
+      } catch (error) {
+        console.error("there was an error fetching property data", error);
+      }
+    };
+    if (propertyID) {
+      fetchPropertyData();
+    }
+    [propertyID];
+  });
+
+  const navigate = useNavigate();
+
   return (
     <div className=" flex-col w-[90%] md:w-[80%] relative justify-center">
-      <button className="flex items-center my-8">
+      <button
+        className="flex items-center mt-8"
+        onClick={() => navigate("/search")}
+      >
         <img className="mr-1" src={arrow}></img>
         Back to property listing
       </button>
-      <div className=" flex flex-col  md:flex-row justify-between pb-[16rem] ">
-        <div className="h-10 bg-[#d70707] text-white rounded-lg py-1.5 w-full  mb-[16rem] md:w-[49%] md:mb-4 px-4 ">
-          <h1 className="pr-6">You are booking a viewing for:</h1>
-          <div className=" bg-[#d70707] text-white rounded-lg py-1.5 w-full h-[15rem] md:w-[49%] px-4 ">
-            <h1 className="pr-6">place holder</h1>
+      <div className=" flex flex-col  md:flex-row justify-between pb-[13rem] ">
+        <div className="h-10 bg-[#d70707] text-white rounded-lg py-1.5 w-full mt-8 mb-[16rem] md:w-[49%] md:mb-4 ">
+          <h1 className="pr-6 pl-4">You are booking a viewing for:</h1>
+          <div className=" text-black py-1.5 w-full h-[15rem]  ">
+            {property && (
+              <div className="flex justify-start md:max-w-[80%] md:max-h-[80%] mt-16 w-full text-[11px] font-medium">
+                <img
+                  className="w-[50%]  items-end mr-4 "
+                  src={`.${property.image[0]}`}
+                  alt="Property Image"
+                />
+
+                <div className="mt-1 flex flex-col">
+                  <div className="mt-2">Address: {property.address},</div>
+                  <div className="flex flex-col">
+                    {property.suburb}, {property.city}
+                  </div>
+                  <div className="mt-2">${property.price} per week</div>
+                  <div className="flex content-end mt-2">
+                    <img className="h-5 mb-2" src={bed}></img>
+                    {property.bedrooms}{" "}
+                    <img className="h-3 ml-2" src={bath}></img>
+                    {property.bathrooms}
+                  </div>
+                  <div className="text-neutral-400 flex align-bottom">
+                    Available: {property.available}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-        <div className="h-10 bg-[#d70707] text-white rounded-lg py-1.5 w-full  md:w-[49%] px-4">
+        <div className="h-10 bg-[#d70707] text-white rounded-lg py-1.5 w-full mt-8 md:w-[49%] px-4">
           <h1>Instructions to view a property:</h1>
 
           <div className="text-black flex flex-row font-medium pt-[4.25rem] text-[.8rem] items-center w-full">
