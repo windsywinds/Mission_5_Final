@@ -9,10 +9,8 @@ import { Header } from "./pages/nils/Header";
 //Homepage
 import { Home } from "./pages/Homepage/Homepage";
 //Search results page
-
-// <Route path="/results" element={<Results/>} />
-//Property listing page
 import Searchpage from "./pages/toby/Searchpage";
+//Property listing page
 
 //Booking page
 import { BookingPage } from "./pages/nils/BookingPage";
@@ -34,11 +32,9 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/home" element={<Home />} />
-
-                    {/* Page route for results <Route path="/results" element={<Results/>} */}
+                    <Route path="/search" element={<Searchpage />} />
                     {/* Page route for listings path="/listing/:id" element= */}
                     <Route path="/booking/:id" element={<BookingPage />} />
-                    <Route path="/search" element={<Searchpage />} />
                 </Routes>
                 {location.pathname === "/home" ? null : <Footer />}
             </SearchProvider>
