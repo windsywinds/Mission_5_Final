@@ -26,7 +26,7 @@ export const BookingPage = () => {
       fetchPropertyData();
     }
     [propertyID];
-  });
+  }, []);
 
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export const BookingPage = () => {
               <div className="flex justify-start md:max-w-[80%] md:max-h-[80%] mt-16 w-full text-[11px] font-medium">
                 <img
                   className="w-[50%]  items-end mr-4 "
-                  src={`.${property.image[0]}`}
+                  src={`..${property.image[0]}`}
                   alt="Property Image"
                 />
 
