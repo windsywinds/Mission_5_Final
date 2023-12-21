@@ -6,15 +6,10 @@ import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB,
 
 //Navigation pages flow required inside <Router>:
 import { Header } from "./pages/Header/Header";
-//Homepage
 import { Home } from "./pages/Homepage/Homepage";
-//Search results page
 import Searchpage from "./pages/Search/Searchpage";
-//Property listing page
 import { ListingPage } from "./pages/Listing/Listing";
-//Booking page
 import { BookingPage } from "./pages/Booking/BookingPage";
-//Footer
 import { Footer } from "./pages/Footer/Footer";
 
 function App() {
