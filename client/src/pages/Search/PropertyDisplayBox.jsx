@@ -1,9 +1,17 @@
 import React from "react";
 import Icon from "../../components/Icon";
+import { useNavigate } from "react-router-dom";
 
-export default function PropertyDisplayBox({ image, location, price, bedrooms, bathrooms, garage, availability }) {
+export default function PropertyDisplayBox({ image, location, price, bedrooms, bathrooms, garage, availability, _id }) {
+    const navigate = useNavigate();
+
+    const handleOnClick = () => {
+        navigate(`/listing/${_id}`);
+    };
+
     return (
         <div
+            onClick={handleOnClick}
             className="flex flex-col md:flex-row m-auto w-[90%] sm:w-[70%] md:w-[90%] aspect-card md:aspect-video bg-white my-5 hover:cursor-pointer"
             style={{ filter: "drop-shadow(-1px 7px 6px #787373)", transitionDuration: "0.3s" }}
         >

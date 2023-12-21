@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FilterBox({ value, rangeValues, dir, _id: id, setRange, currValues }) {
-    const [from, setFrom] = useState(currValues[0]);
-    const [to, setTo] = useState(currValues[1]);
+    const [from, setFrom] = useState(rangeValues.findIndex((value) => value == currValues[0]));
+    const [to, setTo] = useState(rangeValues.findIndex((value) => value == currValues[1]));
+
+    useEffect(() => {
+        if (to === -1) {
+            setTo(0);
+        }
+        if (from === -1) {
+            setFrom(0);
+        }
+    }, []);
 
     const clear = () => {
         setFrom(0);
@@ -19,17 +28,20 @@ export default function FilterBox({ value, rangeValues, dir, _id: id, setRange, 
 
     const view = () => {
         var filterValue = [rangeValues[from], rangeValues[to]];
-        filterValue = filterValue.map((value) => {
-            if (value == "Any") {
-                return 0;
-            }
-            return value;
-        });
+        console.log(filterValue);
+        // filterValue = filterValue.map((value) => {
+        //     if (value == "Any") {
+        //         return 0;
+        //     }
+        //     return value;
+        // });
         setRange(id, filterValue);
     };
 
     return (
-        <div className={`hidden md:block w-[25rem] aspect-video bg-white border-2 border-gray-300 absolute top-8 ${dir}-0 m-auto z-10`}>
+        <div
+            className={`md:block w-full h-[40%] md:h-auto md:w-[25rem] aspect-video bg-white border-2 border-gray-300 fixed md:absolute bottom-0 md:bottom-auto top-auto ${dir}-0 m-auto mt-2 z-10`}
+        >
             <h3 className="text-2xl text-black font-bold text-left px-4 py-2">{value}</h3>
             <div className="flex justify-between px-4 pt-6">
                 <div className="flex flex-col">

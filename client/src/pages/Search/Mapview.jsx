@@ -93,7 +93,7 @@ export default function Mapview({ geolocations }) {
                                 <>
                                     <OverlayView key={index} position={geo[index]} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
                                         <div className="group relative">
-                                            <div className="hidden group-hover:block w-[20rem] h-[14rem] absolute bottom-2 ml-[-9rem] justify-center z-10">
+                                            <div className="hidden group-hover:block group-hover:cursor-pointer w-[20rem] h-[14rem] absolute bottom-2 ml-[-9rem] justify-center z-10">
                                                 <PropertyDisplayBox
                                                     image={property.image[1]}
                                                     location={`${property.address}, ${property.suburb}, ${property.district}, ${property.city}`}
@@ -102,6 +102,7 @@ export default function Mapview({ geolocations }) {
                                                     bathrooms={property.bathrooms}
                                                     garage={property.garage === "yes" ? 1 : 0}
                                                     availability={property.availabile}
+                                                    _id={property.propertyID}
                                                 />
                                             </div>
                                             <img src={locationIcon} alt="location icon" className="w-10 h-10 bg-white rounded-full group-hover:cursor-pointer" />
