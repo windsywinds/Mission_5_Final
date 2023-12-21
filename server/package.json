@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node ./cli/cli.cjs seed ./data/propertyData.json",
     "server": "nodemon server.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",

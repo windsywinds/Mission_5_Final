@@ -1,32 +1,40 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { SearchProvider } from "./pages/Homepage/searchContext";
 
-import { WebConfig } from "./pages/Admin";
+import { WebConfig } from "./pages/services/Admin"; //needed for seeding the DB, add <WebConfig /> to use
+
+//Navigation pages flow required inside <Router>:
+import { Header } from "./pages/Header/Header";
+import { Home } from "./pages/Homepage/Homepage";
+import Searchpage from "./pages/Search/Searchpage";
+import { ListingPage } from "./pages/Listing/Listing";
+import { BookingPage } from "./pages/Booking/BookingPage";
+import { Footer } from "./pages/Footer/Footer";
 
 function App() {
-  return (
-    <div className="bg-white flex flex-col text-black font-normal font-inter h-screen w-screen items-center">
-      
-      {/* Helpful stuff below - styles above this are site global but you can delete below this*/}
-      <div className="bg-white flex flex-col text-[#213547] h-screen w-screen items-center">
+    //sends user to /home as the landing page so that the Footer does not render on the homepage
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (location.pathname === "/") {
+            navigate("/home");
+        }
+    });
 
-          <div className="flex flex-col items-center p-[2em]">
-  <h1 className="text-6xl font-bold pt-2 pb-6 ">Welcome,</h1>
-  <WebConfig />
-</div>
-<div>
-  <h1 className="underline">UI Kit Colour and Font Ref</h1>
-  <p className="text-black front-normal">black, regular</p>
-  <p className="text-[#d70707] font-medium">red, medium</p>
-  <p className="text-[#003db2] font-semibold">blue, semibold</p>
-  <p className="text-[#404040] font-bold">dark gray, bold</p>
-  <p className="text-[#a6a6a6] font-extrabold">light gray, extrabold</p>
-  <p className="text-[#ececec] font-black">even lighter gray, "black"</p>
-  <p className="text-white">white</p>
-</div>
-      </div>
-    </div>
-  );
+    return (
+        <div className="bg-white flex flex-col text-black font-normal font-inter h-full w-screen overflow-x-hidden items-center">
+            <SearchProvider>
+                <Header />
+                <Routes>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/search" element={<Searchpage />} />
+                    <Route path="/listing/:propertyID" element={<ListingPage />} />
+                    <Route path="/booking/:propertyID" element={<BookingPage />} />
+                </Routes>
+                {location.pathname === "/home" ? null : <Footer />}
+            </SearchProvider>
+        </div>
+    );
 }
 
 export default App;
