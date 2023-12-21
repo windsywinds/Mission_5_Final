@@ -4,10 +4,14 @@ import PropertyDisplayBox from "./PropertyDisplayBox";
 import axios from "axios";
 import Icon from "../../components/Icon";
 import FilterBox from "./FilterBox";
+import { UserSearchTerms } from "../Homepage/searchContext";
+import spinner from "../../assets/loading.svg";
 
 const API_ENDPOINT = import.meta.env.VITE_SERVER_URI;
 
 export default function Searchpage() {
+    const { globalAddress, setGlobalAddress, globalKeywords, setGlobalKeywords, globalFilters, setGlobalFilters } = UserSearchTerms();
+
     //All the search input data stored here along with suggestions from the server
     const [isMapview, setMapView] = useState(false);
     const [searchAddress, setSearchAddress] = useState("");
@@ -18,12 +22,19 @@ export default function Searchpage() {
     //data responses of properties stored here
     const [properties, setProperties] = useState([]);
     const [responseError, setResponseError] = useState(false);
+    const [loadingData, setLoadingData] = useState(true);
 
     //stores the sort value
     const [sort, setSort] = useState("featured first");
 
     const [filterBox, setFilterBox] = useState("");
-    const [filterValues, setFilterValues] = useState({});
+    const [filterValues, setFilterValues] = useState({
+        bathroom: ["Any", "Any"],
+        bedroom: ["Any", "Any"],
+        pets: "Any",
+        rent: ["Any", "Any"],
+        suburb: "Any",
+    });
 
     const setFilters = (key, amount) => {
         setFilterValues({ ...filterValues, [key]: amount });
@@ -31,6 +42,7 @@ export default function Searchpage() {
 
     useEffect(() => {
         setFilterBox("");
+        console.log(filterValues);
         const requestBody = { address: searchAddress, keywords: keyWords, ...filterValues };
         searchBackendDatabase(requestBody);
     }, [filterValues]);
@@ -43,7 +55,6 @@ export default function Searchpage() {
         if (e.relatedTarget.id !== name) {
             setFilterBox("");
         }
-        console.log(e.relatedTarget);
     };
 
     const countKeywords = (text, keywords) => {
@@ -83,22 +94,25 @@ export default function Searchpage() {
     };
 
     const searchBackendDatabase = (requestBody) => {
+        setLoadingData(true);
         axios
             .post(`${API_ENDPOINT}search-properties`, requestBody)
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
+                setLoadingData(false);
                 setResponseError(false);
                 setProperties(handleSort(res.data, sort));
             })
             .catch((err) => {
                 console.log(err);
+                setLoadingData(false);
                 setResponseError(true);
             });
     };
 
     const handleSearch = () => {
         // if (searchAddress === "" && keyWords === "") return;
-        const requestBody = { address: searchAddress, keywords: keyWords };
+        const requestBody = { address: searchAddress, keywords: keyWords, ...filterValues };
         setShowSuggestions(false);
         searchBackendDatabase(requestBody);
     };
@@ -113,6 +127,18 @@ export default function Searchpage() {
             temp = temp.filter((word) => word !== "" && word.trim());
             setKeyWords(temp);
         }
+    };
+
+    const tidyAnyValues = (key, index) => {
+        if (filterValues[key]) {
+            return filterValues[key][index] === 0 ? "ANY" : filterValues[key][index];
+        }
+        return "ANY";
+    };
+
+    const handleFiltersDropdownChange = (e, field) => {
+        console.log(e.target.value);
+        setFilters(field, e.target.value);
     };
 
     const handleSortChange = (e) => {
@@ -209,9 +235,20 @@ export default function Searchpage() {
                         <button value="filter-button" class="border-2 border-red-600 text-white bg-red-600 rounded-lg px-2 m-1 md:px-4  text-xs md:text-sm">
                             Refine
                         </button>
-                        <button value="filter-button" class="border-2 border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4 text-xs md:text-sm">
-                            Blockhouse bay <Icon icon="downRed" size="2" style="pb-1 pl-1" />
-                        </button>
+
+                        <select
+                            onChange={(e) => handleFiltersDropdownChange(e, "suburb")}
+                            value={filterValues?.suburb || "Any"}
+                            id="pets"
+                            class="border-2 hover:cursor-pointer border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4  text-xs md:text-sm"
+                        >
+                            <option value="Any">All Suburbs</option>
+                            <option value="Flat Bush">Flat Bush</option>
+                            <option value="Botany Downs">Botany Downs</option>
+                            <option value="Pukekohe">Pukekohe</option>
+                            <option value="Milford">Milford</option>
+                            <option value="Karaka">Karaka</option>
+                        </select>
                         <button
                             onClick={() => {
                                 setFilterBox("rent");
@@ -221,7 +258,7 @@ export default function Searchpage() {
                             id="rent"
                             class="border-2 border-red-600 text-red-600 rounded-lg px-0.5 py-0.5 m-1 md:px-4  text-xs md:text-sm relative"
                         >
-                            $X - $X per week <Icon icon="downRed" size="2" style="pb-1 pl-1" />
+                            {`$${tidyAnyValues("rent", 0)} - $${tidyAnyValues("rent", 1)} Per Week`} <Icon icon="downRed" size="2" style="pb-1 pl-1" />
                             {filterBox === "rent" && (
                                 <FilterBox
                                     id="filter"
@@ -243,7 +280,7 @@ export default function Searchpage() {
                             id="bedroom"
                             class="border-2 border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4  text-xs md:text-sm relative"
                         >
-                            Bedroom <Icon icon="downRed" size="2" style="pb-1 pl-1" />
+                            {`Bedroom ${tidyAnyValues("bedroom", 0)} - ${tidyAnyValues("bedroom", 1)}`} <Icon icon="downRed" size="2" style="pb-1 pl-1" />
                             {filterBox === "bedroom" && (
                                 <FilterBox
                                     id="filter"
@@ -266,7 +303,7 @@ export default function Searchpage() {
                             id="bathroom"
                             class="border-2 border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4  text-xs md:text-sm relative"
                         >
-                            Bathroom <Icon icon="downRed" size="2" style="pb-1 pl-1" />
+                            {`Bathroom ${tidyAnyValues("bathroom", 0)} - ${tidyAnyValues("bathroom", 1)}`} <Icon icon="downRed" size="2" style="pb-1 pl-1" />
                             {filterBox === "bathroom" && (
                                 <FilterBox
                                     id="filter"
@@ -279,10 +316,16 @@ export default function Searchpage() {
                                 />
                             )}
                         </button>
-
-                        <button value="filter-button" class="border-2 border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4  text-xs md:text-sm">
-                            Pets Ok <Icon icon="downRed" size="2" style="pb-1 pl-1" />
-                        </button>
+                        <select
+                            onChange={(e) => handleFiltersDropdownChange(e, "pets")}
+                            value={filterValues?.pets || "Any"}
+                            id="pets"
+                            class="border-2 hover:cursor-pointer border-red-600 text-red-600 rounded-lg px-2 py-0.5 m-1 md:px-4  text-xs md:text-sm"
+                        >
+                            <option value="Any">Pets: Any</option>
+                            <option value="Yes">Pets: Yes</option>
+                            <option value="No">Pets: No</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -313,13 +356,16 @@ export default function Searchpage() {
                     <>
                         <div className={`${isMapview && "hidden"} md:w-[90%]  md:block flex-col items-center  max-h-[75vh] overflow-y-scroll `}>
                             {/* <img src="images\2SBD\1.jpg" /> */}
-                            {properties.length > 0 && (
+                            {loadingData && <img src={spinner} alt="spinner" className="m-auto w-[50%]" />}
+
+                            {properties.length && !loadingData > 0 && (
                                 <p className="text-black font-bold w-[90%] m-auto text-left text-lg md:text-2xl">
                                     We found {properties.length} properties for rent that match your criteria
                                 </p>
                             )}
                             {!responseError &&
                                 properties.length > 0 &&
+                                !loadingData &&
                                 properties.map((property) => {
                                     return (
                                         <PropertyDisplayBox
@@ -330,11 +376,12 @@ export default function Searchpage() {
                                             bathrooms={property.bathrooms}
                                             garage={property.garage === "yes" ? 1 : 0}
                                             availability={property.available}
+                                            _id={property.propertyID}
                                         />
                                     );
                                 })}
-                            {!responseError && properties.length === 0 && <p className="text-black font-semibold text-center">Could not find any listings...</p>}
-                            {responseError && <p className="text-red-600 text-center">An unexpected error occured</p>}
+                            {!responseError && !loadingData && properties.length === 0 && <p className="text-black font-semibold text-center">Could not find any listings...</p>}
+                            {responseError && !loadingData && <p className="text-red-600 text-center">An unexpected error occured</p>}
                         </div>
                     </>
                     <>

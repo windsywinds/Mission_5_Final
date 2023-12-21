@@ -17,18 +17,18 @@ const client = new MongoClient(MONGOURI);
 router.use(bodyParser.json());
 
 router.get("/", async (req, res) => {
-  try {
-    await client.connect();
-    console.log("Connected to MongoDB");
-    const database = client.db(DB_NAME);
-    const collection = database.collection(COLLECTION_NAME);
-    const result = await collection.find().toArray();
-    return res.status(200).json(result);
-  } catch (error) {
-    console.log("Error reading database:", error);
-  } finally {
-    await client.close();
-  }
+    try {
+        await client.connect();
+        console.log("Connected to MongoDB");
+        const database = client.db(DB_NAME);
+        const collection = database.collection(COLLECTION_NAME);
+        const result = await collection.find().toArray();
+        return res.status(200).json(result);
+    } catch (error) {
+        console.log("Error reading database:", error);
+    } finally {
+        await client.close();
+    }
 });
 
 module.exports = router;
