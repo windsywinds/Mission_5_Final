@@ -46,7 +46,7 @@
 
 ## About The Project
 
-A concept website for a real estate angency that allows users to search for properties by location and then filter based on various factors such as price, bedrooms, amenities etc
+A concept website for a real estate angency that allows users to search for properties by location and then filter based on various factors such as price, bedrooms, amenities etc. This project was made collaboratively with 2 other developers and 2 UX designers.
 
 ### Built With
 
